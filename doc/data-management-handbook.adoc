@@ -1,0 +1,69 @@
+:doctype: book
+:pdf-folio-placement: physical
+:media: prepress
+:sectnums:
+:sectnumlevels: 6
+:sectanchors:
+:toc: macro
+:chapter-label:
+:xrefstyle: short
+:toclevels: 6
+
+include::{title_page}[]
+
+:numbered:
+include::introduction.adoc[]
+
+:numbered:
+include::human-roles.adoc[]
+
+:numbered:
+include::{special_intro}[]
+
+:numbered:
+include::summary-requirements.adoc[]
+
+:numbered:
+include::structure-and-documenting.adoc[]
+
+:numbered:
+include::{special_strudoc}[]
+
+:numbered:
+include::data-services.adoc[]
+
+:numbered:
+include::{special_data_services}[]
+
+:numbered:
+include::user-portals.adoc[]
+
+:numbered:
+include::{special_user_portals}[]
+
+:numbered:
+include::data-governance.adoc[]
+
+:numbered:
+include::{special_data_governance}[]
+
+:numbered:
+include::practical-guide.adoc[]
+
+:numbered:
+include::{special_practical_guidance}[]
+
+:numbered!:
+include::acknowledgements.adoc[]
+
+:numbered!:
+include::glossary.adoc[]
+
+:numbered!:
+include::acronyms.adoc[]
+
+:numbered!:
+include::appendixA.adoc[]
+
+:numbered!:
+include::{special_appendix_users}[]

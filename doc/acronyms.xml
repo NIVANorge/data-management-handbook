@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+
+<article lang="en">
+<articleinfo>
+    <date>2022-09-06</date>
+</articleinfo>
+<section id="acronyms">
+<title>List of Acronyms</title>
+<simpara>This list contains acronyms used throughout the DMH. The column "General/Specific" indicates if the acronyms are used in the general part of the DMH (from the template) or if they are organisation specific.</simpara>
+<informaltable
+frame="all"
+rowsep="1" colsep="1"
+>
+<tgroup cols="1">
+<colspec colname="col_1" colwidth="100*"/>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>Acronym</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Meaning</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>General/specific</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="acdd" xreflabel="[acdd]"/>ACDD</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Attribute Convention for Dataset Discovery <ulink url="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3">RD5</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="adc" xreflabel="[adc]"/>ADC</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Arctic Data Centre (<ulink url="https://pm.met.no/home">ADC</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="aen" xreflabel="[aen]"/>AeN</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Arven etter Nansen (English: Nansen Legacy)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="bufr" xreflabel="[bufr]"/>BUFR</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Binary Universal Form for the Representation of meteorological data. WMO standard format for binary data, particularly for non-gridded data (<ulink url="https://www.wmo.int/pages/prog/www/WDM/Guides/Guide-binary-1A.html">BUFR</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="cdm" xreflabel="[cdm]"/>CDM</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Unidata Common Data Model (<ulink url="https://docs.unidata.ucar.edu/netcdf-java/current/userguide/common_data_model_overview.html">CDM</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="cf" xreflabel="[cf]"/>CF</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Climate and Forecast Metadata Conventions (<ulink url="http://cfconventions.org/">CF</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="cms" xreflabel="[cms]"/>CMS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Content Management System</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="csw" xreflabel="[csw]"/>CSW</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Catalog Service for the Web (<ulink url="https://www.ogc.org/standards/cat">CSW</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="dap" xreflabel="[dap]"/>DAP</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Data access protocol (<ulink url="https://earthdata.nasa.gov/esdis/eso/standards-and-references/data-access-protocol-2">DAP</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="dbms" xreflabel="[dbms]"/>DBMS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>DataBase Management System (<ulink url="https://en.wikipedia.org/wiki/Database#Database_management_system">DBMS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="diana" xreflabel="[diana]"/>DIANA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Digital Analysis tool for visualisation of geodata, open source from MET Norway (<ulink url="https://github.com/metno/diana">DIANA</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="diana-wms" xreflabel="[diana-wms]"/>diana-WMS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>WMS implementation in DIANA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="dias" xreflabel="[dias]"/>DIAS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Copernicus Data and Information Access Services (<ulink url="https://www.copernicus.eu/en/access-data/dias">DIAS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="dif" xreflabel="[dif]"/>DIF</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Directory Interchange Format of GCMD (<ulink url="https://earthdata.nasa.gov/esdis/eso/standards-and-references/directory-interchange-format-dif-standard">DIF</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="dlm" xreflabel="[dlm]"/>DLM</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Data life cycle management (<ulink url="https://searchstorage.techtarget.com/definition/data-life-cycle-management">DLM</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="dm" xreflabel="[dm]"/>DM</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Data Manager</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="dmh" xreflabel="[dmh]"/>DMH</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Data Management Handbook (this document)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="dmcg" xreflabel="[dmcg]"/>DMCG</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Data Management Coordination Group</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="dmp" xreflabel="[dmp]"/>DMP</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Data Management Plan (<ulink url="https://en.wikipedia.org/wiki/Data_management_plan">DMP definition</ulink>, <ulink url="https://www.sigma2.no/data-planning">easyDMP tool</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="doi" xreflabel="[doi]"/>DOI</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Digital Object Identifier (<ulink url="https://www.doi.org/index.html">DOI</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="edugain" xreflabel="[edugain]"/>eduGAIN</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>The Global Academic Interfederation Service (<ulink url="https://edugain.org/">eduGAIN</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="envri" xreflabel="[envri]"/>ENVRI</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>European Environmental Research Infrastructures (<ulink url="https://envri.eu/">ENVRI</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="envri-fair" xreflabel="[envri-fair]"/>ENVRI FAIR</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>"Making the ENV RIs data services FAIR." A proposal to the EU’s Horizon 2020 call INFRAEOSC-04</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="eosc" xreflabel="[eosc]"/>EOSC</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>European Open Science Cloud (<ulink url="https://eosc-portal.eu/">EOSC</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="erddap" xreflabel="[erddap]"/>ERDDAP</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>NOAA Environmental Research Division Data Access Protocol  (<ulink url="https://coastwatch.pfeg.noaa.gov/erddap/index.html">ERDDAP</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="esa" xreflabel="[esa]"/>ESA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>European Space Agency (<ulink url="http://www.esa.int/">ESA</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="esgf" xreflabel="[esgf]"/>ESGF</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Earth System Grid Federation (<ulink url="https://esgf.llnl.gov/">ESGF</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="ewc" xreflabel="[ewc]"/>EWC</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>European Weather Cloud ()</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="fair" xreflabel="[fair]"/>FAIR</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Findability, Accessibility, Interoperability and Reusability <ulink url="https://www.nature.com/articles/sdata201618">RD3</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="feide" xreflabel="[feide]"/>FEIDE</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Identity Federation of the Norwegian National Research and Education Network (UNINETT) (<ulink url="https://www.feide.no/">FEIDE</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="ffi" xreflabel="[ffi]"/>FFI</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Norwegian Defence Research Establishment (<ulink url="https://www.ffi.no/en">FFI</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="force11" xreflabel="[force11]"/>FORCE11</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Future of Research Communication and e-Scholarship (<ulink url="https://www.force11.org/">FORCE11</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="gcmd" xreflabel="[gcmd]"/>GCMD</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Global Change Master Directory (<ulink url="https://idn.ceos.org/">GCMD</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="gcw" xreflabel="[gcw]"/>GCW</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Global Cryosphere Watch (<ulink url="https://globalcryospherewatch.org/">GCW</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="geoaccessno" xreflabel="[geoaccessno]"/>GeoAccessNO</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>An NFR-funded infrastructure project, 2015- (<ulink url="https://www.geoaccessno.no/">GeoAccessNO</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="gis" xreflabel="[gis]"/>GIS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><link linkend="glossary-geographic-information-system">Geographic Information System</link></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="grib" xreflabel="[grib]"/>GRIB</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>GRIdded Binary or General Regularly-distributed Information in Binary form. WMO standard file format for gridded data (<ulink url="https://www.wmo.int/pages/prog/www/WDM/Guides/Guide-binary-2.html">GRIB</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="hdf" xreflabel="[hdf]"/>HDF, HDF5</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Hierarchical Data Format (<ulink url="https://en.wikipedia.org/wiki/Hierarchical_Data_Format">HDF</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="hyrax" xreflabel="[hyrax]"/>Hyrax</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>OPeNDAP 4 Data Server (<ulink url="https://www.opendap.org/software/hyrax-data-server">Hyrax</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="imr" xreflabel="[imr]"/>IMR</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Institute of Marine Research (<ulink url="https://www.hi.no/en">IMR</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="inspire" xreflabel="[inspire]"/>INSPIRE</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Infrastructure for Spatial Information in Europe (<ulink url="https://inspire.ec.europa.eu/">INSPIRE</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="iso-19115" xreflabel="[iso-19115]"/>ISO 19115</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>ISO standard for geospatial metadata (<ulink url="https://www.iso.org/standard/53798.html">ISO 19115-1:2014</ulink>).</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="ipy" xreflabel="[ipy]"/>IPY</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>International Polar Year (<ulink url="https://public.wmo.int/en/bulletin/international-polar-year-2007-2008">IPY</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="jrcc" xreflabel="[jrcc]"/>JRCC</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Joint Rescue Coordination centre (<ulink url="https://www.hovedredningssentralen.no/english/">Hovedredningssentralen</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="kdvh" xreflabel="[kdvh]"/>KDVH</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>KlimaDataVareHus</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Specific to METNorway</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="kpi" xreflabel="[kpi]"/>KPI</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Key Performance Indicator (<ulink url="https://en.wikipedia.org/wiki/Performance_indicator">KPI</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="metcim" xreflabel="[metcim]"/>METCIM</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>MET Norway Crisis and Incident Management  (<ulink url="https://metcim.no/">METCIM</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Specific to METNorway</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="metsis" xreflabel="[metsis]"/>METSIS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>MET Norway Scientific Information System</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Specific to METNorway</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="mmd" xreflabel="[mmd]"/>MMD</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Met.no Metadata Format <ulink url="https://github.com/metno/mmd">MMD</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="moai" xreflabel="[moai]"/>MOAI</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Meta Open Archives Initiative server (<ulink url="https://github.com/infrae/moai">MOAI</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="ncwms" xreflabel="[ncwms]"/>ncWMS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>WMS implementation for NetCDF files (<ulink url="https://reading-escience-centre.github.io/ncwms/">ncWMS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="nersc" xreflabel="[nersc]"/>NERSC</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Nansen Environmental and Remote Sensing Center (<ulink url="https://www.nersc.no/">NERSC</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="netcdf" xreflabel="[netcdf]"/>NetCDF</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Network Common Data Format (<ulink url="https://www.unidata.ucar.edu/software/netcdf/">NetCDF</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="netcdf-cf" xreflabel="[netcdf-cf]"/>NetCDF/CF</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>A common combination of <link linkend="netcdf">NetCDF</link> file format with <link linkend="cf">CF</link>-compliant attributes.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="nfr" xreflabel="[nfr]"/>NFR</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>The Research Council of Norway (<ulink url="https://www.forskningsradet.no/en/">NFR</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="nilu" xreflabel="[nilu]"/>NILU</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Norwegian Institute for Air Research (<ulink url="https://www.nilu.no/Forsiden/tabid/41/language/en-GB/Default.aspx">NILU</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="niva" xreflabel="[niva]"/>NIVA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Norwegian Institute for Water Research (<ulink url="https://www.niva.no/en">NIVA</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="nmdc" xreflabel="[nmdc]"/>NMDC</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Norwegian Marine Data Centre, NFR-supported infrastructure project 2013-2017 (<ulink url="https://nmdc.no/">NMDC</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="nordatanet" xreflabel="[nordatanet]"/>NorDataNet</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Norwegian Scientific Data Network, an NFR-funded project 2015-2020 (<ulink url="https://www.nordatanet.no/">NorDataNet</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="norway-digital" xreflabel="[norway-digital]"/>Norway Digital</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Norwegian national spatial data infrastructure organisation (<ulink url="https://www.geonorge.no/en/infrastructure/norway-digital/">Norway Digital</ulink>). Norwegian: <ulink url="https://www.geonorge.no/Geodataarbeid/Norge-digitalt/">Norge digitalt</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="normap" xreflabel="[normap]"/>NORMAP</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Norwegian Satellite Earth Observation Database for Marine and Polar Research, an NFR-funded project 2010-2016  (<ulink url="https://normap.nersc.no/">NORMAP</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="nrpa" xreflabel="[nrpa]"/>NRPA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Norwegian Radiation Protection Authority (<ulink url="https://dsa.no/en/">NRPA</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="nsdi" xreflabel="[nsdi]"/>NSDI</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>National Spatial Data Infrastructure, USA (<ulink url="https://www.fgdc.gov/nsdi/nsdi.html">NSDI</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="nve" xreflabel="[nve]"/>NVE</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Norwegian Water Resources and Energy Directorate (<ulink url="https://www.nve.no/english/">NVE</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="nwp" xreflabel="[nwp]"/>NWP</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Numerical Weather Prediction</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="oai-pmh" xreflabel="[oai-pmh]"/>OAI-PMH</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Open Archives Initiative - Protocol for Metadata Harvesting (<ulink url="https://www.openarchives.org/pmh/">OAI-PMH</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="oais" xreflabel="[oais]"/>OAIS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Open Archival Information System (<ulink url="https://en.wikipedia.org/wiki/Open_Archival_Information_System">OAIS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="oceanotron" xreflabel="[oceanotron]"/>OCEANOTRON</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Web server dedicated to the dissemination of ocean in situ observation data collections (<ulink url="https://forge.ifremer.fr/plugins/mediawiki/wiki/oceanotron/index.php/Oceanotron_description">OCEANOTRON</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="oecd" xreflabel="[oecd]"/>OECD</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>The organisation for Economic Co-operation and Developement. <ulink url="https://www.oecd.org/">OECD</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="ogc" xreflabel="[ogc]"/>OGC</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Open Geospatial Consortium (<ulink url="https://www.ogc.org/">OGC</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="ogc-om" xreflabel="[ogc-om]"/>OGC O&amp;M</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>OGC Observations and Measurements standard (<ulink url="https://www.ogc.org/standards/om">OGC O&amp;M</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="ola" xreflabel="[ola]"/>OLA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Operational-level Agreement (<ulink url="https://en.wikipedia.org/wiki/Operational-level_agreement">OLA</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="opendap" xreflabel="[opendap]"/>OPeNDAP</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Open-source Project for a Network Data Access Protocol (<ulink url="https://www.opendap.org/">OPeNDAP</ulink>) - reference server implementation</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="pid" xreflabel="[pid]"/>PID</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Persistent Identifier (<ulink url="https://en.wikipedia.org/wiki/Persistent_identifier">PID</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="rm-odp" xreflabel="[rm-odp]"/>RM-ODP</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Reference Model of Open Distributed Processing (<ulink url="https://en.wikipedia.org/wiki/RM-ODP">RM-ODP</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="prov" xreflabel="[prov]"/>PROV</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>A W3C Working Group on provenance and a Family of Documents (<ulink url="https://www.w3.org/TR/prov-overview/">PROV</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="saon" xreflabel="[saon]"/>SAON</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Sustaining Arctic Observing Networks (<ulink url="https://iasc.info/data-observations/saon">SAON/IASC</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="sdi" xreflabel="[sdi]"/>SDI</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><link linkend="spatial-data-infrastructure">Spatial Data Infrastructure</link></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="sdn" xreflabel="[sdn]"/>SDN</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://www.seadatanet.org/">SeaDataNet</ulink>, Pan-European infrastructure for ocean &amp; marine data management</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="sios" xreflabel="[sios]"/>SIOS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Svalbard Integrated Arctic Earth Observing System</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="sios-kc" xreflabel="[sios-kc]"/>SIOS-KC</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><link linkend="sios">SIOS</link> Knowledge Centre, an NFR-supported project 2015-2018  (<ulink url="https://www.sios-svalbard.org/KnowledgeCentre">SIOS-KC</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="skos" xreflabel="[skos]"/>SKOS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Simple Knowledge Organization System (<ulink url="https://www.w3.org/2004/02/skos/">SKOS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="sla" xreflabel="[sla]"/>SLA</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Service-level Agreement (<ulink url="https://en.wikipedia.org/wiki/Service-level_agreement">SLA</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="solr" xreflabel="[solr]"/>SolR</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Apache Enterprise search server with a REST-like API (<ulink url="https://lucene.apache.org/solr/">SolR</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="stinfosys" xreflabel="[stinfosys]"/>StInfoSys</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>MET Norway’s Station Information System</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Specific to METnorway</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="tds" xreflabel="[tds]"/>TDS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>THREDDS Data Server (<ulink url="https://www.unidata.ucar.edu/software/tds/current/">TDS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="thredds" xreflabel="[thredds]"/>THREDDS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Thematic Real-time Environmental Distributed Data Services</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="unsdi" xreflabel="[unsdi]"/>UNSDI</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>United Nations Spatial Data Infrastructure (<ulink url="https://en.wikipedia.org/wiki/United_Nations_Spatial_Data_Infrastructure">UNSDI</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="uuid" xreflabel="[uuid]"/>UUID</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Universally Unique Identifier (<ulink url="https://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="w3c" xreflabel="[w3c]"/>W3C</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>World Wide Web Consortium (<ulink url="https://www.w3.org/">W3C</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="wcs" xreflabel="[wcs]"/>WCS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>OGC Web Coverage Service (<ulink url="https://www.ogc.org/standards/wcs">WCS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="wfs" xreflabel="[wfs]"/>WFS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>OGC Web Feature Service (<ulink url="https://www.ogc.org/standards/wfs">WFS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="wigos" xreflabel="[wigos]"/>WIGOS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>WMO Integrated Global Observing System (<ulink url="https://community.wmo.int/activity-areas/wigos">WIGOS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="wis" xreflabel="[wis]"/>WIS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>WMO Information System (<ulink url="https://community.wmo.int/activity-areas/wis">WIS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="wmo" xreflabel="[wmo]"/>WMO</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>World Meteorological Organisation (<ulink url="https://public.wmo.int/en">WMO</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="wms" xreflabel="[wms]"/>WMS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>OGC Web Map Service (<ulink url="https://www.ogc.org/standards/wms">WMS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="wps" xreflabel="[wps]"/>WPS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>OGC Web Processing Service (<ulink url="https://www.ogc.org/standards/wps">WPS</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><anchor id="yopp" xreflabel="[yopp]"/>YOPP</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Year of Polar Prediction (<ulink url="https://yopp.met.no/metadata_search">YOPP Data Portal</ulink>)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+</section>
+</article>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+
+<article lang="en">
+<articleinfo>
+    <date>2022-09-06</date>
+</articleinfo>
+<section id="data-as-netcdf-cf">
+<title>Creating NetCDF-CF files</title>
+<simpara>By documenting and formatting your data using <link linkend="netcdf">NetCDF</link> following the <ulink url="https://cfconventions.org/">CF conventions</ulink> and the <ulink url="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3">Attribute Convention for Data Discovery (ACDD)</ulink>, <link linkend="mmd">MMD</link> files can be automatically generated from the <link linkend="netcdf">NetCDF</link> files. The <link linkend="cf">CF conventions</link> is a controlled vocabulary providing a definitive description of what the data in each variable represents, and the spatial and temporal properties of the data. The <link linkend="acdd">ACDD</link> vocabulary describes attributes recommended for describing a <link linkend="netcdf">NetCDF</link> dataset to data discovery systems. See, e.g., <ulink url="https://unidata.github.io/netcdf4-python/">netCDF4-python docs</ulink>, or <ulink url="http://xarray.pydata.org/en/stable/user-guide/io.html">xarray docs</ulink> for documentation about how to create netCDF files.</simpara>
+<simpara>The ACDD recommendations should be followed in order to properly document your netCDF-CF files. The below tables summarize required and recommended ACDD and some additional attributes that are needed to properly populate a discovery metadata catalog which fulfills the requirements of international standards (e.g., GCMD/DIF, the INSPIRE and WMO profiles of ISO19115, etc.).</simpara>
+<section id="_notes">
+<title>Notes</title>
+<simpara><emphasis role="strong">Keywords</emphasis> describe the content of your dataset following a given vocabulary. You may use any vocabularies to define your keywords, but a link to the keyword definitions should be provided in the ``keywords_vocabulary`` attribute. This attribute provides information about the vocabulary defining the keywords used in the ``keywords`` attribute. Example:</simpara>
+<informalexample>
+<simpara>:keywords_vocabulary = "GCMDSK:GCMD Science Keywords:https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords, GEMET:INSPIRE Themes:http://inspire.ec.europa.eu/theme, NORTHEMES:GeoNorge Themes:https://register.geonorge.no/metadata-kodelister/nasjonal-temainndeling" ;</simpara>
+</informalexample>
+<simpara>Note that the <emphasis role="strong">GCMDSK</emphasis>, <emphasis role="strong">GEMET</emphasis> and <emphasis role="strong">NORTHEMES</emphasis> vocabularies are required for indexing in <ulink url="https://adc.met.no/">S-ENDA</ulink> and <ulink url="https://www.geonorge.no/en/">Geonorge</ulink>. You may find appropriate keywords at the following links:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+<ulink url="https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords">GCMDSK</ulink>
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<ulink url="http://inspire.ec.europa.eu/theme">GEMET</ulink>
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<ulink url="https://register.geonorge.no/metadata-kodelister/nasjonal-temainndeling">NORTHEMES</ulink>
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>The keywords should be provided by the ``keywords`` attribute as a comma separated list with a short name defining the vocabulary used, followed by the actual keyword, i.e., ``short_name:keyword``. Example:</simpara>
+<informalexample>
+<simpara>:keywords = "GCMDSK:Earth Science &gt; Atmosphere &gt; Atmospheric radiation, GEMET:Meteorological geographical features, GEMET:Atmospheric conditions, NORTHEMES:Weather and climate" ;</simpara>
+</informalexample>
+<simpara>See <ulink url="https://adc.met.no/node/96">https://adc.met.no/node/96</ulink> for more information about how to define the ACDD keywords.</simpara>
+<simpara>A data <emphasis role="strong">license</emphasis> provides information about any restrictions on the use of the dataset. To support a linked data approach, the ``license`` element should be supported by a ``license_resource`` element, providing a link to the license definition. Example:</simpara>
+<informalexample>
+<simpara>:license = "CC-BY-4.0" ;<?asciidoc-br?>
+:license_resource = "http://spdx.org/licenses/CC-BY-4.0" ;</simpara>
+</informalexample>
+</section>
+<section id="acdd-elements">
+<title>List of Attributes</title>
+<simpara>This section provides lists of ACDD elements that are required and recommended, as well as some extra elements that are needed to fully support our data management needs. The right columns of these tables provide the <ulink url="https://htmlpreview.github.io/?https://github.com/metno/mmd/blob/master/doc/mmd-specification.html">MET Norway Metadata Specification (MMD)</ulink> fields that map to the ACDD (and our extension to ACDD) elements. Please refer to <ulink url="https://htmlpreview.github.io/?https://github.com/metno/mmd/blob/master/doc/mmd-specification.html">MMD</ulink> for definitions of these elements, as well as controlled vocabularies that should be used. Note that the below tables are automatically generated - check <ulink url="https://github.com/metno/py-mmd-tools/blob/master/py_mmd_tools/mmd_elements.yaml">https://github.com/metno/py-mmd-tools/blob/master/py_mmd_tools/mmd_elements.yaml</ulink> if anything is unclear.</simpara>
+<simpara>In order to check your netCDF-CF files, and to create MMD xml files, you can use the nc2mmd.py script in the <ulink url="https://github.com/metno/py-mmd-tools">py-mmd-tools</ulink> Python package.</simpara>
+<simpara>The following ACDD elements are required:</simpara>
+<informaltable
+frame="all"
+rowsep="1" colsep="1"
+>
+<tgroup cols="3">
+<colspec colname="col_1" colwidth="33*"/>
+<colspec colname="col_2" colwidth="33*"/>
+<colspec colname="col_3" colwidth="33*"/>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><emphasis role="strong">ACDD Attribute</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">MMD equivalent</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">Comment</emphasis></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>id</simpara></entry>
+<entry align="left" valign="top"><simpara>metadata_identifier</simpara></entry>
+<entry align="left" valign="top"><simpara>Required, and should be UUID. No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>naming_authority</simpara></entry>
+<entry align="left" valign="top"><simpara>metadata_identifier</simpara></entry>
+<entry align="left" valign="top"><simpara>Required. We recommend using reverse-DNS naming. No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>date_created</simpara></entry>
+<entry align="left" valign="top"><simpara>last_metadata_update&gt;update&gt;datetime</simpara></entry>
+<entry align="left" valign="top"><simpara>Format as ISO8601.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>title</simpara></entry>
+<entry align="left" valign="top"><simpara>title&gt;title</simpara></entry>
+<entry align="left" valign="top"><simpara>Use ACDD extension "title_no" for Norwegian translation.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>summary</simpara></entry>
+<entry align="left" valign="top"><simpara>abstract&gt;abstract</simpara></entry>
+<entry align="left" valign="top"><simpara>Use ACDD extension "summary_no" for Norwegian translation.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>time_coverage_start</simpara></entry>
+<entry align="left" valign="top"><simpara>temporal_extent&gt;start_date</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>geospatial_lat_max</simpara></entry>
+<entry align="left" valign="top"><simpara>geographic_extent&gt;rectangle&gt;north</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>geospatial_lat_min</simpara></entry>
+<entry align="left" valign="top"><simpara>geographic_extent&gt;rectangle&gt;south</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>geospatial_lon_max</simpara></entry>
+<entry align="left" valign="top"><simpara>geographic_extent&gt;rectangle&gt;east</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>geospatial_lon_min</simpara></entry>
+<entry align="left" valign="top"><simpara>geographic_extent&gt;rectangle&gt;west</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>keywords</simpara></entry>
+<entry align="left" valign="top"><simpara>keywords&gt;keyword</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>keywords_vocabulary</simpara></entry>
+<entry align="left" valign="top"><simpara>keywords&gt;vocabulary</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+<simpara>The following ACDD elements are (highly) recommended:</simpara>
+<informaltable
+frame="all"
+rowsep="1" colsep="1"
+>
+<tgroup cols="4">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="25*"/>
+<colspec colname="col_3" colwidth="25*"/>
+<colspec colname="col_4" colwidth="25*"/>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><emphasis role="strong">ACDD Attribute</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">Default</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">MMD equivalent</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">Comment</emphasis></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>date_metadata_modified</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>last_metadata_update&gt;update&gt;datetime</simpara></entry>
+<entry align="left" valign="top"><simpara>Format as ISO8601. Comma separated list if more than once.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>time_coverage_end</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>temporal_extent&gt;end_date</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>geospatial_bounds</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>geographic_extent&gt;polygon</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>processing_level</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>operational_status</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed. See the MMD docs for valid keywords.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>license</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>use_constraint&gt;identifier</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>creator_role</simpara></entry>
+<entry align="left" valign="top"><simpara>Investigator</simpara></entry>
+<entry align="left" valign="top"><simpara>personnel&gt;role</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>contributor_role</simpara></entry>
+<entry align="left" valign="top"><simpara>Investigator</simpara></entry>
+<entry align="left" valign="top"><simpara>personnel&gt;role</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>creator_name</simpara></entry>
+<entry align="left" valign="top"><simpara>Not available</simpara></entry>
+<entry align="left" valign="top"><simpara>personnel&gt;name</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>contributor_name</simpara></entry>
+<entry align="left" valign="top"><simpara>Not available</simpara></entry>
+<entry align="left" valign="top"><simpara>personnel&gt;name</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>creator_email</simpara></entry>
+<entry align="left" valign="top"><simpara>Not available</simpara></entry>
+<entry align="left" valign="top"><simpara>personnel&gt;email</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>creator_institution</simpara></entry>
+<entry align="left" valign="top"><simpara>Not available</simpara></entry>
+<entry align="left" valign="top"><simpara>personnel&gt;organisation</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>institution</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>data_center&gt;data_center_name&gt;long_name</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>publisher_url</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>data_center&gt;data_center_url</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>project</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>project&gt;long_name</simpara></entry>
+<entry align="left" valign="top"><simpara>Semicolon separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>platform</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>platform&gt;long_name</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>platform_vocabulary</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>platform&gt;resource</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>instrument</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>platform&gt;instrument&gt;long_name</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>instrument_vocabulary</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>platform&gt;instrument&gt;resource</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>source</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>activity_type</simpara></entry>
+<entry align="left" valign="top"><simpara>Semicolon separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>creator_name</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>dataset_citation&gt;author</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>date_created</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>dataset_citation&gt;publication_date</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>title</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>dataset_citation&gt;title</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>publisher_name</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>dataset_citation&gt;publisher</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>metadata_link</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>dataset_citation&gt;url</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>references</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>dataset_citation&gt;other</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+<simpara>The following elements are ACDD extensions that are needed to improve (meta)data interoperability. Please refer to the documentation of <ulink url="https://htmlpreview.github.io/?https://github.com/metno/mmd/blob/master/doc/mmd-specification.html">MMD</ulink> for more details:</simpara>
+<informaltable
+frame="all"
+rowsep="1" colsep="1"
+>
+<tgroup cols="4">
+<colspec colname="col_1" colwidth="25*"/>
+<colspec colname="col_2" colwidth="25*"/>
+<colspec colname="col_3" colwidth="25*"/>
+<colspec colname="col_4" colwidth="25*"/>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><emphasis role="strong">Necessary non-ACDD Attribute</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">Default</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">MMD equivalent</emphasis></simpara></entry>
+<entry align="left" valign="top"><simpara><emphasis role="strong">Comment</emphasis></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>spatial_representation</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>spatial_representation</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>alternate_identifier</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>alternate_identifier&gt;alternate_identifier</simpara></entry>
+<entry align="left" valign="top"><simpara>Alternative identifier for the dataset (but not DOI). Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>alternate_identifier_type</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>alternate_identifier&gt;type</simpara></entry>
+<entry align="left" valign="top"><simpara>Identification of the type of identifier used. Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>date_metadata_modified_type</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>last_metadata_update&gt;update&gt;type</simpara></entry>
+<entry align="left" valign="top"><simpara>E.g., major or minor modification. Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>date_created_type</simpara></entry>
+<entry align="left" valign="top"><simpara>Created</simpara></entry>
+<entry align="left" valign="top"><simpara>last_metadata_update&gt;update&gt;type</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>title_no</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>title&gt;title</simpara></entry>
+<entry align="left" valign="top"><simpara>Used for Norwegian version of the title.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>title_lang</simpara></entry>
+<entry align="left" valign="top"><simpara>en</simpara></entry>
+<entry align="left" valign="top"><simpara>title&gt;lang</simpara></entry>
+<entry align="left" valign="top"><simpara>ISO language code.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>summary_no</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>abstract&gt;abstract</simpara></entry>
+<entry align="left" valign="top"><simpara>Used for Norwegian version of the abstract.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>summary_lang</simpara></entry>
+<entry align="left" valign="top"><simpara>en</simpara></entry>
+<entry align="left" valign="top"><simpara>abstract&gt;lang</simpara></entry>
+<entry align="left" valign="top"><simpara>ISO language code.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>dataset_production_status</simpara></entry>
+<entry align="left" valign="top"><simpara>Complete</simpara></entry>
+<entry align="left" valign="top"><simpara>dataset_production_status</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>access_constraint</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>access_constraint</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>license_resource</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>use_constraint&gt;resource</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>contributor_email</simpara></entry>
+<entry align="left" valign="top"><simpara>Not available</simpara></entry>
+<entry align="left" valign="top"><simpara>personnel&gt;email</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>contributor_institution</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>personnel&gt;organisation</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>contributor_organisation</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>personnel&gt;organisation</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>institution_short_name</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>data_center&gt;data_center_name&gt;short_name</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>related_dataset_id</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>related_dataset&gt;related_dataset</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>related_dataset_relation_type</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>related_dataset&gt;relation_type</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>iso_topic_category</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>iso_topic_category</simpara></entry>
+<entry align="left" valign="top"><simpara>Comma separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>project_short_name</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>project&gt;short_name</simpara></entry>
+<entry align="left" valign="top"><simpara>Semicolon separated list.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>quality_control</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>quality_control</simpara></entry>
+<entry align="left" valign="top"><simpara>No repetition allowed.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>doi</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>dataset_citation&gt;doi</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+</section>
+</section>
+</article>

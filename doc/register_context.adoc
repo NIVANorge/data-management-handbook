@@ -1,0 +1,67 @@
+[[add-to-thredds]]
+==== How to add NetCDF-CF data to thredds
+
+:numbered:
+include::specialized_nc2thredds.adoc[]
+
+[[register-dataset-in-catalog]]
+==== How to register your data in the catalog service
+
+In order to make a dataset findable, a dataset must be registered in a searchable catalog with appropriate metadata. The (meta)data catalog is indexed and exposed through link:https://en.wikipedia.org/wiki/Catalogue_Service_for_the_Web[CSW].
+
+The following needs to be done:
+
+. Generate an MMD xml file from your NetCDF-CF file (see <<local-mmd-xml-generation>>)
+. Test your mmd xml metadata file (see <<test-mmd-file>>)
+. Push the MMD xml file to the discovery metadata catalog (see <<push-mmd-file>>)
+
+[[local-mmd-xml-generation]]
+===== Generation of MMD xml file from NetCDF-CF
+
+Clone the link:https://github.com/metno/py-mmd-tools.git[py-mmd-tools] repo and make a local installation with eg `pip install .`. This should bring in all needed dependencies (we recommend to use a virtual environment).
+
+Then, generate your mmd xml file as follows:
+
+[source]
+----
+cd script
+./nc2mmd.py -i <your netcdf file> -o <your xml output directory>
+----
+
+See `./nc2mmd.py --help` for documentation and extra options.
+
+You will find Extensible Stylesheet Language Transformations (XSLT) documents in the link:https://github.com/metno/mmd.git[MMD] repository. These can be used to translate the metadata documents from MMD to other vocabularies, such as ISO19115:
+
+[source]
+----
+./bin/convert_from_mmd -i <your mmd xml file> -f iso -o <your iso output file name>
+----
+
+[[NOTE]]
+====
+Note that the discovery metadata catalog ingestion tool will take care of translations from MMD, so you don't need to worry about that unless you have special interest in it.
+====
+
+[[test-mmd-file]]
+===== Test the MMD xml file
+
+Install the link:https://github.com/metno/discovery-metadata-catalog-ingestor[dmci app], and run the usage example locally. This will return an error message if anything is wrong with your MMD file.
+
+[[push-mmd-file]]
+===== Push the MMD xml file to the discovery metadata catalog
+
+For development and verification purposes:
+
+[source]
+----
+curl --data-binary "@<PATH_TO_MMD_FILE>" https://dmci-*.s-enda.k8s.met.no/v1/insert
+----
+
+where `*` should be either dev or staging.
+
+For production (the official catalog):
+
+[source]
+----
+curl --data-binary "@<PATH_TO_MMD_FILE>" https://dmci.s-enda.k8s.met.no/v1/insert
+----

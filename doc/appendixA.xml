@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+
+<article lang="en">
+<articleinfo>
+    <date>2022-09-06</date>
+</articleinfo>
+<appendix id="appendixa">
+<title>List of Referenced Software or Services</title>
+<informaltable
+frame="all"
+rowsep="1" colsep="1"
+>
+<tgroup cols="1">
+<colspec colname="col_1" colwidth="100*"/>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>Name</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Description</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Reference</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Fimex package</simpara>
+<simpara>including fimex</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>File Interpolation, Manipulation and EXtraction library for gridded geospatial data</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://wiki.met.no/fimex/start">wiki.met.no documentation</ulink></simpara>
+<simpara><ulink url="https://github.com/metno/fimex">github repository</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>frost2nc</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Dump observational time series from KDVH to NetCDF files</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://github.com/metno/frost2nc">github repository</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>met_moai</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>OAI-PMH implementation based on MOAI</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://github.com/metno/met_moai">github repository</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>mdharvest</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Perl and Python code to harvest discovery metadata using OAI-PMH, OpenSearch and OGC CSW</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://github.com/steingod/mdharvest">github repository</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>METSIS-data</simpara>
+<simpara>-ingestion</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>A generic utility to index <link linkend="mmd">MMD</link> dataset, thumbnails to <link linkend="solr">SolR</link>.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://github.com/metno/metsis-metadata">github repository: metsis-metadata</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>METSIS-data</simpara>
+<simpara>-drupal</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>A module linking the <link linkend="metsis">METSIS</link> back-end services to the Drupal <link linkend="cms">CMS</link></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://github.com/metno/metsis-metadata">github repository: metsis-metadata</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>METSIS-station-handling</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>TBC</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>TBC</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>METSIS-ts</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>WPS or HTTP interface to graphical diagrams.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Not yet openly available, but beta-version is in use in ADC, SIOS, GCW, NorDataNet, YOPP and APPLICATE portals.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>MMD XSD</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>XML Schema document for MMD</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://github.com/metno/mmd">github repository: mmd</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>nc_to_mmd.py</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Builds <link linkend="mmd">MMD</link> metadata from <link linkend="acdd">ACDD</link>-compliant <link linkend="netcdf">NetCDF</link> file attributes.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://github.com/metno/py-mmd-tools/tree/master/py_mmd_tools">github repository: py-mmd-tools</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>NorDataNet validator</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Validates <link linkend="netcdf">NetCDF</link> files for <link linkend="cf">CF</link> and <link linkend="acdd">ACDD</link> compliance.</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://nordatanet.metsis.met.no/user/login?destination=dataset_validation/form">Access URL</ulink></simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>threddslso</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Extracting discovery metadata from NetCDF/CF files with ACDD to ISO 19115</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><ulink url="https://github.com/Unidata/threddsIso">github repository</ulink></simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+</appendix>
+</article>
