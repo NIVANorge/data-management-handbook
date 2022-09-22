@@ -1,12 +1,12 @@
 [[up-implementation]]
-=== Implementation of user portals at [institution]
+=== Implementation of user portals at NIVA
 
 // general introducion:
 
 
 //add portals with links to relevant sub-section
 
-.User portals in use at [institution]
+.User portals in use at NIVA
 [%header, cols=4*]
 |===
 |User portal
@@ -14,13 +14,17 @@
 |General or targeted portal
 |Data consumer
 
-|<<example,Example>>
-|
-|
-|
+|AquaMonitor
+|Water monitoring portal for access of chemical and biological data.
+|General?
+|Internals and externals
+|Logger's data platform
+|Quality control and visualization of time series data from stationary loggers
+|Targeted?
+|Internals and externals
 |===
 
-[[example]]
+
 ==== Current implementation
 
 
