@@ -1,9 +1,13 @@
 [[specialized-part-of-introduction]]
-=== Introduction to the data management at (insert organisation name here)
+=== Introduction to the data management at NIVA
 
 // Data 
 
-==== Background at (insert organsitation name here)
+==== Background at NIVA
+
+NIVA stores its data in database and cloud storages, and provides data access to internal and external researchers/partners via internal portals. 
+NIVA believes in open data, and works to ensure FAIR data principles (Findable, Accessible, Interoperable, reusable).
+
 
 
 [[specialized-external-requirements]]
@@ -13,7 +17,7 @@
 
 ​
 [[data-management-roles-at]]
-==== Data Management roles at (insert organisation name here)
+==== Data Management roles at NIVA
 
 // add institute or organisation specific information below
 
@@ -23,9 +27,20 @@
 |Description
 |Responsibility
 
-|
-|
-|
+|Data specialist
+| Data specialist is involved in the whole data flow process, ensuring that NIVA's data follow the FAIR principles
+|   - Data management planning
 
-|===
+    - Documentation and data architecture
+
+    - Development of document systems
+
+   
+    - Data quality assurance 
+|Data engineer
+|    Data engineer ensures that data are collected and correctly uploaded to NIVA's data storages
+|    
+     -   Reporting of data to https://vannmiljo.miljodirektoratet.no[Vannmiljø] 
+
+     - Quality assurance
 
