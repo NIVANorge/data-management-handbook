@@ -43,4 +43,4 @@ NIVA believes in open data, and works to ensure FAIR data principles (Findable, 
      -   Reporting of data to https://vannmiljo.miljodirektoratet.no[Vannmiljø] 
 
      - Quality assurance
-
+|===
