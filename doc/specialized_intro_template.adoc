@@ -33,7 +33,7 @@ NIVA believes in open data, and works to ensure FAIR data principles (Findable, 
 
     - Documentation and data architecture
 
-    - Development of document systems
+    - Development of documentation systems
 
    
     - Data quality assurance 
