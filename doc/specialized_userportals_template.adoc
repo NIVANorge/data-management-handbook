@@ -6,7 +6,7 @@
 
 //add portals with links to relevant sub-section
 
-.User portals in use at NIVA
+.Current user portals in at NIVA
 [%header, cols=4*]
 |===
 |User portal
@@ -16,16 +16,14 @@
 
 |AquaMonitor
 |Water monitoring portal for access of chemical and biological data.
-|General?
+|General
 |Internals and externals
 |Logger's data platform
 |Quality control and visualization of time series data from stationary loggers
-|Targeted?
+|Targeted
 |Internals and externals
 |===
 
-
-==== Current implementation
 
 
 ==== Planned developments in near-term (< 2 years)
