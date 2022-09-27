@@ -4,21 +4,17 @@
 
 //not updated: chapter links, check all links to glossary and acronyms
 
-The purpose of the Data Management Handbook (<<dmh,DMH>>) is threefold:
+The purpose of NIVA's Data Management Handbook (<<dmh,DMH>>) is threefold:
 
 1. to provide an overview of the principles for data management to be employed;
 2. to help personnel identify their roles and responsibilities for good data management; and
 3. to provide personnel with practical guidelines for carrying out good data management.
 
-<<glossary-data-management,_Data management_>> is the term used to describe the handling of data in a systematic and cost-effective manner. The data management regime should be continuously evolving, to reflect the evolving nature of data collection. Therefore this <<dmh,DMH>> is a living document that will be revised and updated from time to time in order to maintain its relevance.
+This document covers the following topics:
 
-The <<dmh,DMH>> is a strategic governing document and should be used as part of the quality framework the organisation is using. 
-
-// Remember to add links/references to the chapters below
-
-The primary focus of this <<dmh,DMH>> is on the management of <<glossary-dynamic-geodata, dynamic geodata>>. <<glossary-dynamic-geodata, Dynamic geodata>> is weather, environment and climate-related data that changes in space and time and is thus descriptive of processes in nature. Examples are weather observations, weather forecasts, pollution (environmental toxins) in water, air and sea, information on the drift of cod eggs and salmon lice, water flow in rivers, driving conditions on the roads and the distribution of sea ice. <<glossary-dynamic-geodata, Dynamic geodata>> provides important constraints for many decision-making processes and activities in society.
-
-This introduction (<<introduction>>) lays forth the background and principles for the data management regime. Chapters 2-5 describe the implementation of the main building blocks: structuring and documenting data (<<structuring-and-documenting>>), data services (<<data-services>>), portals and documentation aimed at users (<<user-portals>>), and governance issues (<<data-governance>>). Each chapter starts with a brief statement of its purpose, followed by a description of what is implemented at present, as well as the planned developments for the short-term (<2 years) and expected developments for the longer term (2-5 years).
+1. Infrastructure
+2. Data flows
+3. Current data applications
  
 Practical guidelines for carrying out good <<glossary-data-management,data management>> are addressed in Chapter 6.
 
