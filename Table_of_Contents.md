@@ -2,9 +2,7 @@
 
 ## 1.1 Introduction to the data management at NIVA
 
-
 ### 1.1.1 Data Management Roles
-
 
 ### 1.1.2 List of main users of NIVA data
 
@@ -14,21 +12,15 @@
 
 ### 1.2.2 Cloud
 
-
-## 1.3 External data management requirements
-
-## 1.4 Summary of data management requirements
-
+## 1.3 FAIR principles overview
 
 # 2. Metadata structure
 
 ## 2.1 Overview
 
 ## 2.2 Current practice at NIVA
-What rules/requirements for naming projects, etc. to comply with.
 
 ## 2.3 Planned developments
-
 
 # 3. Data Services
 
@@ -51,17 +43,13 @@ What rules/requirements for naming projects, etc. to comply with.
 
 # 6. Practical Guides
 
-
 ## 6.1 Data Management Plan (DMP)
------------------------------------
-
 
 ### 6.1.1 Using Argos
 ### 6.1.2 Using Zenodo
 ### 6.1.3 Publishing the plan
 
 ## 6.2 User portals
------------------------------------
 
 # 7. Appendices
 
