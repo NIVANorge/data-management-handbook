@@ -53,53 +53,40 @@ Add C4 diagram
 ## 1.4 Summary of data management requirements
 
 
-# 2. Structuring and Documenting Data for Efficient Discovery and Use
+# 2. Metadata structure
+
+## Overview
 
 ### 2.1 Current practice at NIVA
+What rules/requirements for naming projects, etc. to comply with.
 
-### 2.2 Planned developments in the near-term (< 2 years)
-
-### 2.3 Expected evolution in the longer term (> 2 years)
+### 2.2 Planned developments
 
 
 # 3. Data Services
 
-## 3.1 Current services at NIVA
+## 3.1 Current services implemented at NIVA
+- Data upload
+- LIMS
+- Reporting
+-   
 
-## 3.2 Planned developments in near-term (< 2 years)
-
-## 3.3 Expected evolution in the longer term (> 2 years)
-
+## 3.2 Legacy
+## 3.3 Planned developments
 
 # 4. User Portals and Documentation
 
 ## 4.1 Current implementation at NIVA
+- Aquamonitor
+- ShinyLab
+- Superset/Grafana
+  
+## 4.2 Planned developments 
 
-## 4.2 Planned developments in near-term (< 2 years)
 
-## 4.3 Expected evolution in the longer term (> 2 years)
+# 5. Data Management Plan (DMP)
 
-
-# 5. Data Governance
-
-## 5.1 Data life cycle management
-
-## 5.2 Data Management Plan
-
-## 5.3 Current implementation at NIVA
-
-### 5.3.1 Organisational Roles
-### 5.3.2 Status DMH
-### 5.3.3 Status Discovery metadata
-### 5.3.4 Status DMP
-
-## 5.4 Planned developments in the near-term (< 2 years)
-
-Revise DMH annually or when needed.
-
-## 5.5 Expected evolution in the longer term (> 2 years)
-
-Revise DMH annually or when needed.
+## 5.1 Current implementation at NIVA
 
 
 # 6. Practical Guides
@@ -115,36 +102,9 @@ The funding agency of your project will usually provide requirements, guidelines
 ### 6.1.2 Using Zenodo
 ### 6.1.3 Publishing the plan
 
-## 6.2 Submitting data as NetCDF-CF
+### 6.2 User portals
+-----------------------------------
 
-### 6.2.1 Workflow
-### 6.2.2 Creating NetCDF-CF files
-#### 6.2.2.1 Notes
-#### 6.2.2.2 List of Attributes
-### 6.2.3 How to add NetCDF-CF data to thredds
-### 6.2.4 How to register your data in the catalog service
+# 7. Appendices
 
-
-## 6.3 Searching data in the Catalog Service for the Web (CSW) interface
-
-### 6.3.1 Using OpenSearch
-
-#### 6.3.1.1 Local test machines
-
-
-#### 6.3.1.2 Online catalog
-
-
-#### 6.3.1.3 OpenSearch examples
-
-
-### 6.3.2 Advanced geographical search
-
-### 6.3.3 Web portals
-
-
-### 6.3.4 QGIS
-
-# 7. Acknowledgements
-
-# 8. Appendices
+List of Acronyms
