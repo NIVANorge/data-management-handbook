@@ -22,12 +22,12 @@
 
 # 2. Metadata structure
 
-## Overview
+## 2.1 Overview
 
-### 2.1 Current practice at NIVA
+## 2.2 Current practice at NIVA
 What rules/requirements for naming projects, etc. to comply with.
 
-### 2.2 Planned developments
+## 2.3 Planned developments
 
 
 # 3. Data Services
@@ -60,7 +60,7 @@ What rules/requirements for naming projects, etc. to comply with.
 ### 6.1.2 Using Zenodo
 ### 6.1.3 Publishing the plan
 
-### 6.2 User portals
+## 6.2 User portals
 -----------------------------------
 
 # 7. Appendices
