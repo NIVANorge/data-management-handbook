@@ -4,19 +4,22 @@
 
 //not updated: chapter links, check all links to glossary and acronyms
 
-The purpose of NIVA's Data Management Handbook (<<dmh,DMH>>) is threefold:
+=== Purporse
+
+The purpose of the Data Management Handbook (<<dmh,DMH>>) is threefold:
 
 1. to provide an overview of the principles for data management to be employed;
 2. to help personnel identify their roles and responsibilities for good data management; and
 3. to provide personnel with practical guidelines for carrying out good data management.
 
-This document covers the following topics:
+<<glossary-data-management,_Data management_>> is the term used to describe the handling of data in a systematic and cost-effective manner. The data management regime should be continuously evolving, to reflect the evolving nature of data collection. Therefore this <<dmh,DMH>> is a living document that will be revised and updated from time to time in order to maintain its relevance.
 
-1. Infrastructure
-2. Data flows
-3. Current data applications
- 
-Practical guidelines for carrying out good <<glossary-data-management,data management>> are addressed in Chapter 6.
+The <<dmh,DMH>> is a strategic governing document and should be used as part of the quality framework the organisation is using. 
+
+// Remember to add links/references to the chapters below
+
+The primary focus of this <<dmh,DMH>> is on the management of <<glossary-dynamic-geodata, dynamic geodata>>. <<glossary-dynamic-geodata, Dynamic geodata>> is weather, environment and climate-related data that changes in space and time and is thus descriptive of processes in nature. Examples are weather observations, weather forecasts, pollution (environmental toxins) in water, air and sea, information on the drift of cod eggs and salmon lice, water flow in rivers, driving conditions on the roads and the distribution of sea ice. <<glossary-dynamic-geodata, Dynamic geodata>> provides important constraints for many decision-making processes and activities in society.
+
 
 The intended audience for this DMH is any personell involved in the process of making data available for the end user. This process can be viewed as a value chain that moves from the producer of the data to the data consumer (i.e., the end user). The process is further described in <<value-chain>> (<<img-value-chain>>).  
 
@@ -26,10 +29,10 @@ The handbook can be used in three ways:
 . Read Chapters 2-5 to learn about how <<glossary-data-management,data management>> is currently implemented and how it is expected to evolve in the next few years; and
 . Read <<practical-guides>> to find how-to's and practical guidelines.
 
-[[PrinciplesDataManagement]]
-=== The principles of data management for dynamic geodata
+[[FairPrinciples]]
+=== FAIR principles in data management
 
-Principles of standardised data documentation, publication, sharing and preservation have been formalised in the <<glossary-fair-principles,FAIR>> Guiding Principles for scientific data management and stewardship [https://www.nature.com/articles/sdata201618[RD3]] through a process facilitated by <<force11,FORCE11>>. FAIR stands for findability, accessibility, <<glossary-interoperability,interoperability>> and reusability.
+FAIR stands for findability, accessibility, <<glossary-interoperability,interoperability>> and reusability.
 
 By following the <<fair,FAIR>> principles it is easier to obtain a common approach to <<glossary-data-management,data management>>, or a <<glossary-unified-data-management, unified data management>> model. One of the main motivations for implementing a <<glossary-unified-data-management, unified data management>> is to better serve the users of the data. Primarily, this can be approached by making user needs and requirements the guide for determining what data we provide and how. For example, it will be described below how the specification of <<glossary-dataset,datasets>> should be determined. By implementing the data management practices described here, it is expected that users will experience:
 
@@ -40,6 +43,25 @@ By following the <<fair,FAIR>> principles it is easier to obtain a common approa
 * Ability to compare and combine data from internal and external sources;
 * Ability to apply common data transformations, like spatial, temporal and variables subsetting and reprojection, before downloading anything;
 * Possibility to build specialized metadata catalogues and data portals targeting a specific user community.
+
+[[fair-data-management-model]]
+==== A data management model based on the FAIR principles
+
+The <<glossary-data-management,data management>> model is built upon the following principles:
+
+* *Standardisation* – compliance with established international standards;
+* *<<glossary-interoperability,Interoperability>>* – enabling machine-to-machine interfaces including standardised documentation and encoding of data;
+* *Integrity* – ensuring that data and data access can be maintained over time, and ensuring that the consumer receives the same data at any time of request;
+* *Traceability* – documentation of the <<glossary-data-provenance,provenance>> of a <<glossary-dataset,dataset>>, i.e., all actions taken to produce and maintain the <<glossary-dataset,dataset>> and the usage of the data in downstream systems;
+* *Modularisation* – enabling replacement of one component of the system without necessitating other changes.
+
+The model’s basic functions fall into three main categories:
+
+1. *Documentation of data* using <<glossary-discovery-metadata,discovery>> and <<glossary-use-metadata,use metadata>>. The documentation identifies who, what, when, where, and how, and shall make it easy for consumers to find and understand data. This requires application of information containers and utilisation of <<glossary-controlled-vocabulary,controlled vocabularies>> and <<glossary-ontology,ontologies>> where textual representation is required. It also covers the topic of <<glossary-data-provenance,data provenance>> which is used to describe the origin and all actions done on a <<glossary-dataset,dataset>>. <<glossary-data-provenance,Data provenance>> is closely linked with <<glossary-workflow-management,workflow management>>. Furthermore, it covers the relationship between <<glossary-dataset,datasets>>. Application of <<glossary-ontology,ontologies>> in data documentation is closely linked to the concept of <<glossary-linked-data,linked data>>. 
+2. *Publication and sharing of data* focuses on making data accessible to consumers internally and externally. Application of standardised approaches is vital, along with cost effective solutions that are sustainable. Direct integration of data in applications for analysis through data streaming minimises the complexity and overhead in dissemination solutions. This category also covers persistent identifiers for data.
+3. *Preservation of data* includes short and long term management of data, which secures access and availability throughout the lifespan of the data. Good solutions in this area depend on expected and actual usage of the data. Preservation of data includes the concept of data life cycle, i.e., the documented flow of data from initial storage through to obsolescence and permanent archiving (or deletion) and preserving the metadata for the same data (even after deleting).
+
+Principles of standardised data documentation, publication, sharing and preservation have been formalised in the <<glossary-fair-principles,FAIR>> Guiding Principles for scientific data management and stewardship [https://www.nature.com/articles/sdata201618[RD3]] through a process facilitated by <<force11,FORCE11>>. 
 
 [[external-requirements]]
 ==== External data management requirements and forcing mechanisms
@@ -119,19 +141,3 @@ Metadata is a broad concept. In our <<glossary-data-management,data management>>
 
 The tools and facilities used to manage the information for efficient discovery and use are further described in <<structuring-and-documenting>>.
 
-[[fair-data-management-model]]
-==== A data management model based on the FAIR principles
-
-The <<glossary-data-management,data management>> model is built upon the following principles:
-
-* *Standardisation* – compliance with established international standards;
-* *<<glossary-interoperability,Interoperability>>* – enabling machine-to-machine interfaces including standardised documentation and encoding of data;
-* *Integrity* – ensuring that data and data access can be maintained over time, and ensuring that the consumer receives the same data at any time of request;
-* *Traceability* – documentation of the <<glossary-data-provenance,provenance>> of a <<glossary-dataset,dataset>>, i.e., all actions taken to produce and maintain the <<glossary-dataset,dataset>> and the usage of the data in downstream systems;
-* *Modularisation* – enabling replacement of one component of the system without necessitating other changes.
-
-The model’s basic functions fall into three main categories:
-
-1. *Documentation of data* using <<glossary-discovery-metadata,discovery>> and <<glossary-use-metadata,use metadata>>. The documentation identifies who, what, when, where, and how, and shall make it easy for consumers to find and understand data. This requires application of information containers and utilisation of <<glossary-controlled-vocabulary,controlled vocabularies>> and <<glossary-ontology,ontologies>> where textual representation is required. It also covers the topic of <<glossary-data-provenance,data provenance>> which is used to describe the origin and all actions done on a <<glossary-dataset,dataset>>. <<glossary-data-provenance,Data provenance>> is closely linked with <<glossary-workflow-management,workflow management>>. Furthermore, it covers the relationship between <<glossary-dataset,datasets>>. Application of <<glossary-ontology,ontologies>> in data documentation is closely linked to the concept of <<glossary-linked-data,linked data>>. 
-2. *Publication and sharing of data* focuses on making data accessible to consumers internally and externally. Application of standardised approaches is vital, along with cost effective solutions that are sustainable. Direct integration of data in applications for analysis through data streaming minimises the complexity and overhead in dissemination solutions. This category also covers persistent identifiers for data.
-3. *Preservation of data* includes short and long term management of data, which secures access and availability throughout the lifespan of the data. Good solutions in this area depend on expected and actual usage of the data. Preservation of data includes the concept of data life cycle, i.e., the documented flow of data from initial storage through to obsolescence and permanent archiving (or deletion) and preserving the metadata for the same data (even after deleting).
