@@ -126,3 +126,49 @@ GIS systems have lately evolved in distributed <<glossary-spatial-data-infrastru
 |[[glossary-scientific-workflow-management-system]](Scientific) Workflow management systems
 |A scientific workflow system is a specialised form of a workflow management system designed specifically to compose and execute a series of computational or data manipulation steps, or workflow, in a scientific application. (https://en.wikipedia.org/wiki/Scientific_workflow_system[Wikipedia]) As of today, many different frameworks exist with their own proprietary languages, these might eventually get connected by using a https://www.commonwl.org/[common workflow definition language].
 |===
+
+[[metadata]]
+==== Metadata
+
+Metadata is a broad concept. In our <<glossary-data-management,data management>> model the term "metadata" is used in several contexts, specifically the five categories that are briefly described in <<table-metadata>>. 
+
+.Brief introduction to different types of metadata.
+[[table-metadata]]
+[%header, cols=4*]
+|===
+|Type
+|Purpose
+|Description
+|Examples
+
+|[[discovery-metadata]]Discovery metadata
+|Used to find relevant data
+|Discovery metadata are also called index metadata and are a digital version of the library index card. They describe who did what, where and when, how to access data and potential constraints on the data. They shall also link to further information on the data, such as <<site-metadata,site metadata>>.
+|<<ISO-19115,ISO 19115>> +
+<<gcmd,GCMD>>/<<dif,DIF>>
+
+|[[use-metadata]]Use metadata
+|Used to understand data found
+|Use metadata describes the actual content of a <<glossary-dataset,dataset>> and how it is encoded. The purpose is to enable the user to understand the data without any further communication. They describe the content of variables using standardised vocabularies, units of variables, encoding of missing values, map projections, etc.
+|<<cf,Climate and Forecast (CF) Convention>> +
+<<bufr,BUFR>> +
+<<grib,GRIB>>
+
+|[[site-metadata]]Site metadata
+|Used to understand data found
+|Site metadata are used to describe the context of observational data. They describe the location of an observation, the instrumentation, procedures, etc. To a certain extent they overlap with <<discovery-metadata,discovery metadata>>, but also extend discovery metadata. Site metadata can be used for observation network design. Site metadata can be considered a type of <<use-metadata,use metadata>>.
+|<<wigos,WIGOS>> +
+<<ogc-om,OGC O&M>>
+
+|[[configuration-metadata]]Configuration metadata
+|Used to tune portal services for <<glossary-dataset,datasets>> intended for data consumers (e.g., WMS)
+|Configuration metadata are used to improve the services offered through a portal to the user community. This can, e.g., be how to best visualise a <<glossary-product,product>>.
+|
+
+|[[system-metadata]]System metadata
+|Used to understand the technical structure of the <<glossary-data-management,data management>> system and track changes in it 
+|System metadata covers, e.g., technical details of the storage system, <<glossary-web-service,web services>>, their purpose and how they interact with other components of the <<glossary-data-management,data management>> system, available and consumed storage, number of users and other KPI elements etc.
+|
+|===
+
+The tools and facilities used to manage the information for efficient discovery and use are further described in <<structuring-and-documenting>>.
