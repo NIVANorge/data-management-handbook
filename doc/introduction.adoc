@@ -4,8 +4,6 @@
 
 //not updated: chapter links, check all links to glossary and acronyms
 
-=== Purporse
-
 The purpose of the Data Management Handbook (<<dmh,DMH>>) is threefold:
 
 1. to provide an overview of the principles for data management to be employed;
@@ -29,8 +27,7 @@ The handbook can be used in three ways:
 . Read Chapters 2-5 to learn about how <<glossary-data-management,data management>> is currently implemented and how it is expected to evolve in the next few years; and
 . Read <<practical-guides>> to find how-to's and practical guidelines.
 
-[[FairPrinciples]]
-=== FAIR principles in data management
+=== FAIR principles 
 
 FAIR stands for findability, accessibility, <<glossary-interoperability,interoperability>> and reusability.
 
@@ -45,7 +42,7 @@ By following the <<fair,FAIR>> principles it is easier to obtain a common approa
 * Possibility to build specialized metadata catalogues and data portals targeting a specific user community.
 
 [[fair-data-management-model]]
-==== A data management model based on the FAIR principles
+==== FAIR data management model
 
 The <<glossary-data-management,data management>> model is built upon the following principles:
 
@@ -64,80 +61,18 @@ The model’s basic functions fall into three main categories:
 Principles of standardised data documentation, publication, sharing and preservation have been formalised in the <<glossary-fair-principles,FAIR>> Guiding Principles for scientific data management and stewardship [https://www.nature.com/articles/sdata201618[RD3]] through a process facilitated by <<force11,FORCE11>>. 
 
 [[external-requirements]]
-==== External data management requirements and forcing mechanisms
+=== External data management requirements and forcing mechanisms
 
 Any organisation that strives to implement <<glossary-fair-principles,FAIR>> data management model has to relate to external forcing mechanisms concerning <<glossary-data-management,data management>> at several levels. At the national level, the organisation must comply with national regulations as decided by the government. Some of these are indications of expected behaviour (e.g., <<oecd,OECD>> regulations) and some are implemented through a legal framework. The Norwegian government has over time promoted free and open sharing of public data. Mechanisms for how to do this are governed by the <<glossary-geodataloven,Geodataloven>> (implemented as <<glossary-geonorge,Geonorge>>), which is a national implementation of the European <<inspire,INSPIRE directive>> (to be amended in 2019). <<inspire,INSPIRE>> defines a federated multinational <<glossary-spatial-data-infrastructure,Spatial Data Infrastructure>> (<<sdi,SDI>>) for the European Union, similar to <<nsdi,NSDI>> in the USA or <<unsdi,UNSDI>> under the United Nations. The goal is to provide a standardised access to data and provide the necessary tools to be able to work with the data in a unified manner. In short, these legal frameworks require standardised documentation (at discovery and use level; these concepts are described later) and access (through specified protocols) to the data identified.
 
 Other external requirements and forcing mechanisms that are organisation-specific are provided in <<specialized-external-requirements>>.
 
-[[value-chain]]
-==== The data value chain
 
-The process of getting the data from the data producer to the consumer can be viewed as a value chain. An example of a data value chain is presented in <<img-value-chain>>. Typically, data from a wide variety of providers are used in the value chain. Traditionally, the data used have been transmitted on request from one <<glossary-data-centre,data centre>> to another, and used in the specific processing chains that requested the data. The focus on reuse of data in various contexts has been missing.
+[[generic-dmp]]
+==== Data Management Plan
 
-[#img-value-chain]
-.Value chain for data.
-image::value_chain.png[Value chain,800]
+A Data Management Plan (<<dmp,DMP>>) is a document that describes textually how the <<glossary-data-life-cycle-management,data life cycle management>> will be carried out for <<glossary-dataset,datasets>> used and produced in specific projects. Generally, these are externally financed projects for which such documentation is required by funding agencies. However, larger internal projects covering many datasets may also find it beneficial to create a specific document of this type.
+ 
+Currently, agencies funding R&D (such as <<nfr,NFR>> and the EU) do not strictly require a DMP from the start of any project. However, for projects in the geosciences, data management is an issue that must be addressed, and the agencies strongly recommend a DMP solution. For example, NFR publishes https://www.forskningsradet.no/en/Adviser-research-policy/open-science/open-access-to-research-data/[guidelines] for the contents of a DMP, including links to tools (templates and online services); these guidelines are recommended for any data management project or activity and will in time become a requirement according to <<nfr,NFR>>.
 
-Datasets and metadata are what travels through the value chain. At the end of the <<glossary-data-management,data management>> value chain are the data consumers.
-
-[[dataset]]
-==== Dataset
-
-A <<glossary-dataset,dataset>> is a collection of data. In the context of the <<glossary-data-management,data management>> model, the storage mode of the <<glossary-dataset,dataset>> is irrelevant, since access mechanisms can be decoupled from the storage layer as experienced by a data consumer. Typically, a <<glossary-dataset,dataset>> represents a number of variables in time and space. A more detailed definition is provided in the <<glossary-glossary,Glossary of Terms>>. In order to best serve the data through <<web-service,web services>>, the following principles are useful for guiding the <<glossary-dataset,dataset>> definition:
-
-1. A <<glossary-dataset,dataset>> can be a collection of variables stored in, for example, a relational database or as flat files;
-2. A <<glossary-dataset,dataset>> is defined as a number of spatial and/or temporal variables;
-3. A <<glossary-dataset,dataset>> should be defined by the information content and not the production method;
-4. A good <<glossary-dataset,dataset>> does not mix <<glossary-feature-type,feature types>>, i.e., trajectories and gridded data should not be present in the same <<glossary-dataset,dataset>>.
-
-Point 3 implies that the output of, e.g., a numerical model may be divided into several <<glossary-dataset,datasets>> that are related. This is also important in order to efficiently serve the data through <<glossary-webservice,web services>>. For instance, model variables defined on different vertical coordinates should be separated as <<glossary-linked-data,linked datasets>>, since some <<ogc,OGC>> services (e.g., <<wms,WMS>>) are unable to handle mixed coordinates in the same <<glossary-dataset,dataset>>. One important linked dataset relation is the parent-child relationship. In the numerical model example, the parent dataset would be the model simulation. This (parent) dataset encompasses all datasets created by the model simulation such as, e.g., two NetCDF-CF files (child datasets) with different information content.
-
-Most importantly, a <<glossary-dataset,dataset>> should be defined to meet the consumer needs. This means that the specification of a <<glossary-dataset,dataset>> should follow not only the content guidelines just listed, but also address the consumer needs for data delivery, security and preservation.
-
-[[metadata]]
-==== Metadata
-
-Metadata is a broad concept. In our <<glossary-data-management,data management>> model the term "metadata" is used in several contexts, specifically the five categories that are briefly described in <<table-metadata>>. 
-
-.Brief introduction to different types of metadata.
-[[table-metadata]]
-[%header, cols=4*]
-|===
-|Type
-|Purpose
-|Description
-|Examples
-
-|[[discovery-metadata]]Discovery metadata
-|Used to find relevant data
-|Discovery metadata are also called index metadata and are a digital version of the library index card. They describe who did what, where and when, how to access data and potential constraints on the data. They shall also link to further information on the data, such as <<site-metadata,site metadata>>.
-|<<ISO-19115,ISO 19115>> +
-<<gcmd,GCMD>>/<<dif,DIF>>
-
-|[[use-metadata]]Use metadata
-|Used to understand data found
-|Use metadata describes the actual content of a <<glossary-dataset,dataset>> and how it is encoded. The purpose is to enable the user to understand the data without any further communication. They describe the content of variables using standardised vocabularies, units of variables, encoding of missing values, map projections, etc.
-|<<cf,Climate and Forecast (CF) Convention>> +
-<<bufr,BUFR>> +
-<<grib,GRIB>>
-
-|[[site-metadata]]Site metadata
-|Used to understand data found
-|Site metadata are used to describe the context of observational data. They describe the location of an observation, the instrumentation, procedures, etc. To a certain extent they overlap with <<discovery-metadata,discovery metadata>>, but also extend discovery metadata. Site metadata can be used for observation network design. Site metadata can be considered a type of <<use-metadata,use metadata>>.
-|<<wigos,WIGOS>> +
-<<ogc-om,OGC O&M>>
-
-|[[configuration-metadata]]Configuration metadata
-|Used to tune portal services for <<glossary-dataset,datasets>> intended for data consumers (e.g., WMS)
-|Configuration metadata are used to improve the services offered through a portal to the user community. This can, e.g., be how to best visualise a <<glossary-product,product>>.
-|
-
-|[[system-metadata]]System metadata
-|Used to understand the technical structure of the <<glossary-data-management,data management>> system and track changes in it 
-|System metadata covers, e.g., technical details of the storage system, <<glossary-web-service,web services>>, their purpose and how they interact with other components of the <<glossary-data-management,data management>> system, available and consumed storage, number of users and other KPI elements etc.
-|
-|===
-
-The tools and facilities used to manage the information for efficient discovery and use are further described in <<structuring-and-documenting>>.
 
