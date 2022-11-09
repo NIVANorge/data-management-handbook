@@ -448,41 +448,41 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#introduction">1. Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#PrinciplesDataManagement">1.1. The principles of data management for dynamic geodata</a>
+<li><a href="#_fair_principles">1.1. FAIR principles</a>
 <ul class="sectlevel3">
-<li><a href="#external-requirements">1.1.1. External data management requirements and forcing mechanisms</a></li>
-<li><a href="#value-chain">1.1.2. The data value chain</a></li>
-<li><a href="#dataset">1.1.3. Dataset</a></li>
-<li><a href="#metadata">1.1.4. Metadata</a></li>
-<li><a href="#fair-data-management-model">1.1.5. A data management model based on the FAIR principles</a></li>
+<li><a href="#fair-data-management-model">1.1.1. FAIR data management model</a></li>
 </ul>
 </li>
-<li><a href="#human-roles">1.2. Human roles in data management</a>
+<li><a href="#external-requirements">1.2. External data management requirements and forcing mechanisms</a>
 <ul class="sectlevel3">
-<li><a href="#human-roles-context">1.2.1. Context</a></li>
-<li><a href="#user-definitions">1.2.2. User definitions</a>
+<li><a href="#generic-dmp">1.2.1. Data Management Plan</a></li>
+</ul>
+</li>
+<li><a href="#human-roles">1.3. Roles in data management</a>
+<ul class="sectlevel3">
+<li><a href="#user-definitions">1.3.1. User definitions</a>
 <ul class="sectlevel4">
-<li><a href="#data-consumer">1.2.2.1. Data consumers</a>
+<li><a href="#data-consumer">1.3.1.1. Data consumers</a>
 <ul class="sectlevel5">
-<li><a href="#advanced-consumers">1.2.2.1.1. Advanced consumers</a></li>
-<li><a href="#intermediate-consumers">1.2.2.1.2. Intermediate consumers</a></li>
-<li><a href="#simple-consumers">1.2.2.1.3. Simple consumers</a></li>
+<li><a href="#advanced-consumers">1.3.1.1.1. Advanced consumers</a></li>
+<li><a href="#intermediate-consumers">1.3.1.1.2. Intermediate consumers</a></li>
+<li><a href="#simple-consumers">1.3.1.1.3. Simple consumers</a></li>
 </ul>
 </li>
-<li><a href="#data-producers">1.2.2.2. Data producers</a></li>
-<li><a href="#data-management-roles">1.2.2.3. Data Management Roles</a></li>
+<li><a href="#data-producers">1.3.1.2. Data producers</a></li>
+<li><a href="#data-management-roles">1.3.1.3. Data Management Roles</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#specialized-part-of-introduction">1.3. Introduction to the data management at NIVA</a>
+<li><a href="#specialized-part-of-introduction">1.4. Introduction to the data management at NIVA</a>
 <ul class="sectlevel3">
-<li><a href="#_background_at_niva">1.3.1. Background at NIVA</a></li>
-<li><a href="#specialized-external-requirements">1.3.2. External data management requirements and forcing mechanisms specific to (insert organisation name here)</a></li>
-<li><a href="#data-management-roles-at">1.3.3. Data Management roles at NIVA</a></li>
+<li><a href="#_background_at_niva">1.4.1. Background at NIVA</a></li>
+<li><a href="#specialized-external-requirements">1.4.2. External data management requirements and forcing mechanisms specific to (insert organisation name here)</a></li>
+<li><a href="#data-management-roles-at">1.4.3. Data Management roles at NIVA</a></li>
 </ul>
 </li>
-<li><a href="#summary-requirements">1.4. Summary of data management requirements</a></li>
+<li><a href="#summary-requirements">1.5. Summary of data management requirements</a></li>
 </ul>
 </li>
 <li><a href="#structuring-and-documenting">2. Structuring and Documenting Data for Efficient Discovery and Use</a>
@@ -590,7 +590,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#acknowledgements">Acknowledgements</a></li>
-<li><a href="#glossary">Glossary of Terms and Names</a></li>
+<li><a href="#glossary">Glossary of Terms and Names</a>
+<ul class="sectlevel3">
+<li><a href="#metadata">Metadata</a></li>
+</ul>
+</li>
 <li><a href="#acronyms">List of Acronyms</a></li>
 <li><a href="#appendixa">Appendix A: List of Referenced Software or Services</a></li>
 <li><a href="#appendixb">Appendix B: Users of [insert institution]’s data</a></li>
@@ -661,7 +665,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="introduction"><a class="anchor" href="#introduction"></a>1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The purpose of NIVA&#8217;s Data Management Handbook (<a href="#dmh">DMH</a>) is threefold:</p>
+<p>The purpose of the Data Management Handbook (<a href="#dmh">DMH</a>) is threefold:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -677,26 +681,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 <div class="paragraph">
-<p>This document covers the following topics:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Infrastructure</p>
-</li>
-<li>
-<p>Data flows</p>
-</li>
-<li>
-<p>Current data applications</p>
-</li>
-</ol>
+<p><a href="#glossary-data-management"><em>Data management</em></a> is the term used to describe the handling of data in a systematic and cost-effective manner. The data management regime should be continuously evolving, to reflect the evolving nature of data collection. Therefore this <a href="#dmh">DMH</a> is a living document that will be revised and updated from time to time in order to maintain its relevance.</p>
 </div>
 <div class="paragraph">
-<p>Practical guidelines for carrying out good <a href="#glossary-data-management">data management</a> are addressed in Chapter 6.</p>
+<p>The <a href="#dmh">DMH</a> is a strategic governing document and should be used as part of the quality framework the organisation is using.</p>
 </div>
 <div class="paragraph">
-<p>The intended audience for this DMH is any personell involved in the process of making data available for the end user. This process can be viewed as a value chain that moves from the producer of the data to the data consumer (i.e., the end user). The process is further described in <a href="#value-chain">Section 1.1.2</a> (<a href="#img-value-chain">Figure 1</a>).</p>
+<p>The primary focus of this <a href="#dmh">DMH</a> is on the management of <a href="#glossary-dynamic-geodata">dynamic geodata</a>. <a href="#glossary-dynamic-geodata">Dynamic geodata</a> is weather, environment and climate-related data that changes in space and time and is thus descriptive of processes in nature. Examples are weather observations, weather forecasts, pollution (environmental toxins) in water, air and sea, information on the drift of cod eggs and salmon lice, water flow in rivers, driving conditions on the roads and the distribution of sea ice. <a href="#glossary-dynamic-geodata">Dynamic geodata</a> provides important constraints for many decision-making processes and activities in society.</p>
+</div>
+<div class="paragraph">
+<p>The intended audience for this DMH is any personell involved in the process of making data available for the end user. This process can be viewed as a value chain that moves from the producer of the data to the data consumer (i.e., the end user). The process is further described in <a href="#value-chain">[value-chain]</a> (<a href="#img-value-chain">[img-value-chain]</a>).</p>
 </div>
 <div class="paragraph">
 <p>The handbook can be used in three ways:</p>
@@ -715,9 +709,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ol>
 </div>
 <div class="sect2">
-<h3 id="PrinciplesDataManagement"><a class="anchor" href="#PrinciplesDataManagement"></a>1.1. The principles of data management for dynamic geodata</h3>
+<h3 id="_fair_principles"><a class="anchor" href="#_fair_principles"></a>1.1. FAIR principles</h3>
 <div class="paragraph">
-<p>Principles of standardised data documentation, publication, sharing and preservation have been formalised in the <a href="#glossary-fair-principles">FAIR</a> Guiding Principles for scientific data management and stewardship [<a href="https://www.nature.com/articles/sdata201618">RD3</a>] through a process facilitated by <a href="#force11">FORCE11</a>. FAIR stands for findability, accessibility, <a href="#glossary-interoperability">interoperability</a> and reusability.</p>
+<p>FAIR stands for findability, accessibility, <a href="#glossary-interoperability">interoperability</a> and reusability.</p>
 </div>
 <div class="paragraph">
 <p>By following the <a href="#fair">FAIR</a> principles it is easier to obtain a common approach to <a href="#glossary-data-management">data management</a>, or a <a href="#glossary-unified-data-management">unified data management</a> model. One of the main motivations for implementing a <a href="#glossary-unified-data-management">unified data management</a> is to better serve the users of the data. Primarily, this can be approached by making user needs and requirements the guide for determining what data we provide and how. For example, it will be described below how the specification of <a href="#glossary-dataset">datasets</a> should be determined. By implementing the data management practices described here, it is expected that users will experience:</p>
@@ -748,121 +742,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="sect3">
-<h4 id="external-requirements"><a class="anchor" href="#external-requirements"></a>1.1.1. External data management requirements and forcing mechanisms</h4>
-<div class="paragraph">
-<p>Any organisation that strives to implement <a href="#glossary-fair-principles">FAIR</a> data management model has to relate to external forcing mechanisms concerning <a href="#glossary-data-management">data management</a> at several levels. At the national level, the organisation must comply with national regulations as decided by the government. Some of these are indications of expected behaviour (e.g., <a href="#oecd">OECD</a> regulations) and some are implemented through a legal framework. The Norwegian government has over time promoted free and open sharing of public data. Mechanisms for how to do this are governed by the <a href="#glossary-geodataloven">Geodataloven</a> (implemented as <a href="#glossary-geonorge">Geonorge</a>), which is a national implementation of the European <a href="#inspire">INSPIRE directive</a> (to be amended in 2019). <a href="#inspire">INSPIRE</a> defines a federated multinational <a href="#glossary-spatial-data-infrastructure">Spatial Data Infrastructure</a> (<a href="#sdi">SDI</a>) for the European Union, similar to <a href="#nsdi">NSDI</a> in the USA or <a href="#unsdi">UNSDI</a> under the United Nations. The goal is to provide a standardised access to data and provide the necessary tools to be able to work with the data in a unified manner. In short, these legal frameworks require standardised documentation (at discovery and use level; these concepts are described later) and access (through specified protocols) to the data identified.</p>
-</div>
-<div class="paragraph">
-<p>Other external requirements and forcing mechanisms that are organisation-specific are provided in <a href="#specialized-external-requirements">Section 1.3.2</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="value-chain"><a class="anchor" href="#value-chain"></a>1.1.2. The data value chain</h4>
-<div class="paragraph">
-<p>The process of getting the data from the data producer to the consumer can be viewed as a value chain. An example of a data value chain is presented in <a href="#img-value-chain">Figure 1</a>. Typically, data from a wide variety of providers are used in the value chain. Traditionally, the data used have been transmitted on request from one <a href="#glossary-data-centre">data centre</a> to another, and used in the specific processing chains that requested the data. The focus on reuse of data in various contexts has been missing.</p>
-</div>
-<div id="img-value-chain" class="imageblock">
-<div class="content">
-<img src="data:image/png;base64,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" alt="Value chain" width="800">
-</div>
-<div class="title">Figure 1. Value chain for data.</div>
-</div>
-<div class="paragraph">
-<p>Datasets and metadata are what travels through the value chain. At the end of the <a href="#glossary-data-management">data management</a> value chain are the data consumers.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="dataset"><a class="anchor" href="#dataset"></a>1.1.3. Dataset</h4>
-<div class="paragraph">
-<p>A <a href="#glossary-dataset">dataset</a> is a collection of data. In the context of the <a href="#glossary-data-management">data management</a> model, the storage mode of the <a href="#glossary-dataset">dataset</a> is irrelevant, since access mechanisms can be decoupled from the storage layer as experienced by a data consumer. Typically, a <a href="#glossary-dataset">dataset</a> represents a number of variables in time and space. A more detailed definition is provided in the <a href="#glossary-glossary">Glossary of Terms</a>. In order to best serve the data through <a href="#web-service">web services</a>, the following principles are useful for guiding the <a href="#glossary-dataset">dataset</a> definition:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>A <a href="#glossary-dataset">dataset</a> can be a collection of variables stored in, for example, a relational database or as flat files;</p>
-</li>
-<li>
-<p>A <a href="#glossary-dataset">dataset</a> is defined as a number of spatial and/or temporal variables;</p>
-</li>
-<li>
-<p>A <a href="#glossary-dataset">dataset</a> should be defined by the information content and not the production method;</p>
-</li>
-<li>
-<p>A good <a href="#glossary-dataset">dataset</a> does not mix <a href="#glossary-feature-type">feature types</a>, i.e., trajectories and gridded data should not be present in the same <a href="#glossary-dataset">dataset</a>.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Point 3 implies that the output of, e.g., a numerical model may be divided into several <a href="#glossary-dataset">datasets</a> that are related. This is also important in order to efficiently serve the data through <a href="#glossary-webservice">web services</a>. For instance, model variables defined on different vertical coordinates should be separated as <a href="#glossary-linked-data">linked datasets</a>, since some <a href="#ogc">OGC</a> services (e.g., <a href="#wms">WMS</a>) are unable to handle mixed coordinates in the same <a href="#glossary-dataset">dataset</a>. One important linked dataset relation is the parent-child relationship. In the numerical model example, the parent dataset would be the model simulation. This (parent) dataset encompasses all datasets created by the model simulation such as, e.g., two NetCDF-CF files (child datasets) with different information content.</p>
-</div>
-<div class="paragraph">
-<p>Most importantly, a <a href="#glossary-dataset">dataset</a> should be defined to meet the consumer needs. This means that the specification of a <a href="#glossary-dataset">dataset</a> should follow not only the content guidelines just listed, but also address the consumer needs for data delivery, security and preservation.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="metadata"><a class="anchor" href="#metadata"></a>1.1.4. Metadata</h4>
-<div class="paragraph">
-<p>Metadata is a broad concept. In our <a href="#glossary-data-management">data management</a> model the term "metadata" is used in several contexts, specifically the five categories that are briefly described in <a href="#table-metadata">Table 1</a>.</p>
-</div>
-<table id="table-metadata" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Brief introduction to different types of metadata.</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Purpose</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Examples</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="discovery-metadata"></a>Discovery metadata</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used to find relevant data</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Discovery metadata are also called index metadata and are a digital version of the library index card. They describe who did what, where and when, how to access data and potential constraints on the data. They shall also link to further information on the data, such as <a href="#site-metadata">site metadata</a>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ISO-19115">ISO 19115</a><br>
-<a href="#gcmd">GCMD</a>/<a href="#dif">DIF</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="use-metadata"></a>Use metadata</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used to understand data found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Use metadata describes the actual content of a <a href="#glossary-dataset">dataset</a> and how it is encoded. The purpose is to enable the user to understand the data without any further communication. They describe the content of variables using standardised vocabularies, units of variables, encoding of missing values, map projections, etc.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#cf">Climate and Forecast (CF) Convention</a><br>
-<a href="#bufr">BUFR</a><br>
-<a href="#grib">GRIB</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="site-metadata"></a>Site metadata</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used to understand data found</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Site metadata are used to describe the context of observational data. They describe the location of an observation, the instrumentation, procedures, etc. To a certain extent they overlap with <a href="#discovery-metadata">discovery metadata</a>, but also extend discovery metadata. Site metadata can be used for observation network design. Site metadata can be considered a type of <a href="#use-metadata">use metadata</a>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#wigos">WIGOS</a><br>
-<a href="#ogc-om">OGC O&amp;M</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="configuration-metadata"></a>Configuration metadata</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used to tune portal services for <a href="#glossary-dataset">datasets</a> intended for data consumers (e.g., WMS)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration metadata are used to improve the services offered through a portal to the user community. This can, e.g., be how to best visualise a <a href="#glossary-product">product</a>.</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="system-metadata"></a>System metadata</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used to understand the technical structure of the <a href="#glossary-data-management">data management</a> system and track changes in it</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">System metadata covers, e.g., technical details of the storage system, <a href="#glossary-web-service">web services</a>, their purpose and how they interact with other components of the <a href="#glossary-data-management">data management</a> system, available and consumed storage, number of users and other KPI elements etc.</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The tools and facilities used to manage the information for efficient discovery and use are further described in <a href="#structuring-and-documenting">Chapter 2</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="fair-data-management-model"><a class="anchor" href="#fair-data-management-model"></a>1.1.5. A data management model based on the FAIR principles</h4>
+<h4 id="fair-data-management-model"><a class="anchor" href="#fair-data-management-model"></a>1.1.1. FAIR data management model</h4>
 <div class="paragraph">
 <p>The <a href="#glossary-data-management">data management</a> model is built upon the following principles:</p>
 </div>
@@ -901,36 +781,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p>Principles of standardised data documentation, publication, sharing and preservation have been formalised in the <a href="#glossary-fair-principles">FAIR</a> Guiding Principles for scientific data management and stewardship [<a href="https://www.nature.com/articles/sdata201618">RD3</a>] through a process facilitated by <a href="#force11">FORCE11</a>.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="human-roles"><a class="anchor" href="#human-roles"></a>1.2. Human roles in data management</h3>
-<div class="sect3">
-<h4 id="human-roles-context"><a class="anchor" href="#human-roles-context"></a>1.2.1. Context</h4>
+<h3 id="external-requirements"><a class="anchor" href="#external-requirements"></a>1.2. External data management requirements and forcing mechanisms</h3>
 <div class="paragraph">
-<p>Data is processed and interpreted to generate knowledge (e.g., about the weather) for end users. The knowledge can be presented as information in the form of actual data, illustrations, text or other forms of communication. In this context, an illustration is a representation of data, whereas data means the numerical values needed to analyse and interpret a natural process (i.e., calibrated or with calibration information; it must be possible to understand the meaning of the numerical value from the available and machine-readable information).</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="data:image/png;base64,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" alt="information to knowledge" width="376" height="325">
-</div>
+<p>Any organisation that strives to implement <a href="#glossary-fair-principles">FAIR</a> data management model has to relate to external forcing mechanisms concerning <a href="#glossary-data-management">data management</a> at several levels. At the national level, the organisation must comply with national regulations as decided by the government. Some of these are indications of expected behaviour (e.g., <a href="#oecd">OECD</a> regulations) and some are implemented through a legal framework. The Norwegian government has over time promoted free and open sharing of public data. Mechanisms for how to do this are governed by the <a href="#glossary-geodataloven">Geodataloven</a> (implemented as <a href="#glossary-geonorge">Geonorge</a>), which is a national implementation of the European <a href="#inspire">INSPIRE directive</a> (to be amended in 2019). <a href="#inspire">INSPIRE</a> defines a federated multinational <a href="#glossary-spatial-data-infrastructure">Spatial Data Infrastructure</a> (<a href="#sdi">SDI</a>) for the European Union, similar to <a href="#nsdi">NSDI</a> in the USA or <a href="#unsdi">UNSDI</a> under the United Nations. The goal is to provide a standardised access to data and provide the necessary tools to be able to work with the data in a unified manner. In short, these legal frameworks require standardised documentation (at discovery and use level; these concepts are described later) and access (through specified protocols) to the data identified.</p>
 </div>
 <div class="paragraph">
-<p><strong>Definition:</strong></p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>Data here means the numerical values needed to analyse and interpret a natural process (i.e., calibrated or with calibration information, provenance, etc.; it must be possible to understand the meaning of the numerical value from the available and machine-readable information).</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Advanced users typically consume some type of data in order to process and interpret it, and produce new knowledge, e.g., in the form of a new dataset or other information. The datasets can be organised in different levels, such as the <a href="http://codes.wmo.int/wmdr/_SourceOfObservation">WMO WIGOS definition for levels of data</a>. Less advanced users apply information based on data (e.g., an illustration) to make decisions (e.g., clothing adapted to the forecast weather).</p>
-</div>
+<p>Other external requirements and forcing mechanisms that are organisation-specific are provided in <a href="#specialized-external-requirements">Section 1.4.2</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="user-definitions"><a class="anchor" href="#user-definitions"></a>1.2.2. User definitions</h4>
+<h4 id="generic-dmp"><a class="anchor" href="#generic-dmp"></a>1.2.1. Data Management Plan</h4>
+<div class="paragraph">
+<p>A Data Management Plan (<a href="#dmp">DMP</a>) is a document that describes textually how the <a href="#glossary-data-life-cycle-management">data life cycle management</a> will be carried out for <a href="#glossary-dataset">datasets</a> used and produced in specific projects. Generally, these are externally financed projects for which such documentation is required by funding agencies. However, larger internal projects covering many datasets may also find it beneficial to create a specific document of this type.</p>
+</div>
+<div class="paragraph">
+<p>Currently, agencies funding R&amp;D (such as <a href="#nfr">NFR</a> and the EU) do not strictly require a DMP from the start of any project. However, for projects in the geosciences, data management is an issue that must be addressed, and the agencies strongly recommend a DMP solution. For example, NFR publishes <a href="https://www.forskningsradet.no/en/Adviser-research-policy/open-science/open-access-to-research-data/">guidelines</a> for the contents of a DMP, including links to tools (templates and online services); these guidelines are recommended for any data management project or activity and will in time become a requirement according to <a href="#nfr">NFR</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="human-roles"><a class="anchor" href="#human-roles"></a>1.3. Roles in data management</h3>
+<div class="sect3">
+<h4 id="user-definitions"><a class="anchor" href="#user-definitions"></a>1.3.1. User definitions</h4>
 <div class="paragraph">
 <p>We define two types of users:</p>
 </div>
@@ -953,12 +830,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="data-consumer"><a class="anchor" href="#data-consumer"></a>1.2.2.1. Data consumers</h5>
+<h5 id="data-consumer"><a class="anchor" href="#data-consumer"></a>1.3.1.1. Data consumers</h5>
 <div class="paragraph">
 <p>We split between three types of data consumers: (1) advanced, (2) intermediate, and (3) simple. These are defined below.</p>
 </div>
 <div class="sect5">
-<h6 id="advanced-consumers"><a class="anchor" href="#advanced-consumers"></a>1.2.2.1.1. Advanced consumers</h6>
+<h6 id="advanced-consumers"><a class="anchor" href="#advanced-consumers"></a>1.3.1.1.1. Advanced consumers</h6>
 <div class="paragraph">
 <p>Advanced consumers require information in the form of data and metadata (including provenance) to gain a full understanding of what data exists and how to use it (discovery and use metadata), and to automatize the generation of derived data (new knowledge generation), verification (of information), and validation of data products.</p>
 </div>
@@ -984,7 +861,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect5">
-<h6 id="intermediate-consumers"><a class="anchor" href="#intermediate-consumers"></a>1.2.2.1.2. Intermediate consumers</h6>
+<h6 id="intermediate-consumers"><a class="anchor" href="#intermediate-consumers"></a>1.3.1.1.2. Intermediate consumers</h6>
 <div class="paragraph">
 <p>Intermediate consumers need enough information to find data and understand if it can answer their question(s) (discovery and use metadata). Also, they often want to cross reference a dataset with another dataset or metadata for inter-comparative verification of information.</p>
 </div>
@@ -1022,7 +899,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect5">
-<h6 id="simple-consumers"><a class="anchor" href="#simple-consumers"></a>1.2.2.1.3. Simple consumers</h6>
+<h6 id="simple-consumers"><a class="anchor" href="#simple-consumers"></a>1.3.1.1.3. Simple consumers</h6>
 <div class="paragraph">
 <p>Simple consumers do not have any prior knowledge about the data. Information in the form of text or illustrations is sufficient for their decision making. They do not need to understand either data or metadata, and they are most likely looking for answers to simple questions.</p>
 </div>
@@ -1075,36 +952,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="data-producers"><a class="anchor" href="#data-producers"></a>1.2.2.2. Data producers</h5>
+<h5 id="data-producers"><a class="anchor" href="#data-producers"></a>1.3.1.2. Data producers</h5>
 <div class="paragraph">
 <p>A producer is an advanced consumer at one level of data that generate new information at a higher level. This new information could be in the form of actual data or simple information, such as an illustration or a text summary. It is essential that any information can be traced back to the source(s).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="data-management-roles"><a class="anchor" href="#data-management-roles"></a>1.2.2.3. Data Management Roles</h5>
+<h5 id="data-management-roles"><a class="anchor" href="#data-management-roles"></a>1.3.1.3. Data Management Roles</h5>
 <div class="paragraph">
-<p>Between the data providers and data consumers are the processes that manage and deliver the datasets (cf. <a href="#img-value-chain">Figure 1</a>). A number of human roles may be defined with responsibilities that, together, ensure that these processes are carried out in accordance with the data management requirements of the organisation. The definition and filling of these roles depend heavily on the particular organisation, and each organisation must devise its own best solution.</p>
+<p>Between the data providers and data consumers are the processes that manage and deliver the datasets (cf. <a href="#img-value-chain">[img-value-chain]</a>). A number of human roles may be defined with responsibilities that, together, ensure that these processes are carried out in accordance with the data management requirements of the organisation. The definition and filling of these roles depend heavily on the particular organisation, and each organisation must devise its own best solution.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="specialized-part-of-introduction"><a class="anchor" href="#specialized-part-of-introduction"></a>1.3. Introduction to the data management at NIVA</h3>
+<h3 id="specialized-part-of-introduction"><a class="anchor" href="#specialized-part-of-introduction"></a>1.4. Introduction to the data management at NIVA</h3>
 <div class="sect3">
-<h4 id="_background_at_niva"><a class="anchor" href="#_background_at_niva"></a>1.3.1. Background at NIVA</h4>
+<h4 id="_background_at_niva"><a class="anchor" href="#_background_at_niva"></a>1.4.1. Background at NIVA</h4>
 <div class="paragraph">
 <p>NIVA stores its data in database and cloud storages, and provides data access to internal and external researchers/partners via internal portals.
 NIVA believes in open data, and works to ensure FAIR data principles (Findable, Accessible, Interoperable, reusable).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="specialized-external-requirements"><a class="anchor" href="#specialized-external-requirements"></a>1.3.2. External data management requirements and forcing mechanisms specific to (insert organisation name here)</h4>
+<h4 id="specialized-external-requirements"><a class="anchor" href="#specialized-external-requirements"></a>1.4.2. External data management requirements and forcing mechanisms specific to (insert organisation name here)</h4>
 <div class="paragraph">
 <p>​</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="data-management-roles-at"><a class="anchor" href="#data-management-roles-at"></a>1.3.3. Data Management roles at NIVA</h4>
+<h4 id="data-management-roles-at"><a class="anchor" href="#data-management-roles-at"></a>1.4.3. Data Management roles at NIVA</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1138,7 +1015,7 @@ NIVA believes in open data, and works to ensure FAIR data principles (Findable, 
 </div>
 </div>
 <div class="sect2">
-<h3 id="summary-requirements"><a class="anchor" href="#summary-requirements"></a>1.4. Summary of data management requirements</h3>
+<h3 id="summary-requirements"><a class="anchor" href="#summary-requirements"></a>1.5. Summary of data management requirements</h3>
 <div class="paragraph">
 <p>The data management regime described in this DMH follows the Arctic Data centre model and shall ensure that:</p>
 </div>
@@ -1249,7 +1126,7 @@ NIVA believes in open data, and works to ensure FAIR data principles (Findable, 
 <div class="sect2">
 <h3 id="_implementation"><a class="anchor" href="#_implementation"></a>2.2. Implementation</h3>
 <div class="paragraph">
-<p>An essential prerequisite for structuring and documenting data is the specification of the <a href="#glossary-dataset">dataset(s)</a>, cf. <a href="#dataset">Section 1.1.3</a>. The <a href="#glossary-dataset">dataset</a> is the basic building block of our <a href="#fair-data-management-model">data management model</a>; all the documentation and services described in this <a href="#dmh">DMH</a> are built on <a href="#glossary-dataset">datasets</a>. The dataset specification is the first step in structuring one&#8217;s data for efficient management, and it is mandatory.</p>
+<p>An essential prerequisite for structuring and documenting data is the specification of the <a href="#glossary-dataset">dataset(s)</a>, cf. <a href="#dataset">[dataset]</a>. The <a href="#glossary-dataset">dataset</a> is the basic building block of our <a href="#fair-data-management-model">data management model</a>; all the documentation and services described in this <a href="#dmh">DMH</a> are built on <a href="#glossary-dataset">datasets</a>. The dataset specification is the first step in structuring one&#8217;s data for efficient management, and it is mandatory.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1257,7 +1134,7 @@ NIVA believes in open data, and works to ensure FAIR data principles (Findable, 
 <div class="sect3">
 <h4 id="Current-practice"><a class="anchor" href="#Current-practice"></a>2.3.1. Current practice in structuring and documenting data</h4>
 <table id="table-localdatatypes" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Data types available at [insert institution here], with the fileformats supported. The primary fileformat is marked in <strong>bold</strong></caption>
+<caption class="title">Table 1. Data types available at [insert institution here], with the fileformats supported. The primary fileformat is marked in <strong>bold</strong></caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1361,7 +1238,7 @@ NIVA believes in open data, and works to ensure FAIR data principles (Findable, 
 <div class="sect2">
 <h3 id="up-implementation"><a class="anchor" href="#up-implementation"></a>4.2. Implementation of user portals at NIVA</h3>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Current user portals in at NIVA</caption>
+<caption class="title">Table 2. Current user portals in at NIVA</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1549,7 +1426,7 @@ This might change if "<a href="https://github.com/hmpf/easydmp/issues/226">Hoste
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Define your dataset (see <a href="#glossary-dataset">dataset</a> and <a href="#dataset">Section 1.1.3</a>)</p>
+<p>Define your dataset (see <a href="#glossary-dataset">dataset</a> and <a href="#dataset">[dataset]</a>)</p>
 </li>
 <li>
 <p>Create a NetCDF-CF file (see <a href="#data-as-netcdf-cf">Section 6.2.2</a>)</p>
@@ -1721,6 +1598,11 @@ This might change if "<a href="https://github.com/hmpf/easydmp/issues/226">Hoste
 <td class="tableblock halign-left valign-top"><p class="tableblock">No repetition allowed.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">license</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use_constraint&gt;resource</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keywords</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keywords&gt;keyword</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Comma separated list.</p></td>
@@ -1772,12 +1654,6 @@ This might change if "<a href="https://github.com/hmpf/easydmp/issues/226">Hoste
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">operational_status</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No repetition allowed. See the MMD docs for valid keywords.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">license</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">use_constraint&gt;identifier</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No repetition allowed.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">creator_role</p></td>
@@ -1891,13 +1767,13 @@ This might change if "<a href="https://github.com/hmpf/easydmp/issues/226">Hoste
 <td class="tableblock halign-left valign-top"><p class="tableblock">metadata_link</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dataset_citation&gt;url</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comma separated list.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DOI or dataset landing page</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">references</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">dataset_citation&gt;other</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comma separated list.</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
@@ -1985,10 +1861,10 @@ This might change if "<a href="https://github.com/hmpf/easydmp/issues/226">Hoste
 <td class="tableblock halign-left valign-top"><p class="tableblock">No repetition allowed.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">license_resource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">license_identifier</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">use_constraint&gt;resource</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No repetition allowed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use_constraint&gt;identifier</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contributor_email</p></td>
@@ -1998,12 +1874,6 @@ This might change if "<a href="https://github.com/hmpf/easydmp/issues/226">Hoste
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contributor_institution</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">personnel&gt;organisation</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">contributor_organisation</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">personnel&gt;organisation</p></td>
 <td class="tableblock halign-left valign-top"></td>
@@ -2536,6 +2406,68 @@ GIS systems have lately evolved in distributed <a href="#glossary-spatial-data-i
 </tr>
 </tbody>
 </table>
+<div class="sect3">
+<h4 id="metadata"><a class="anchor" href="#metadata"></a>Metadata</h4>
+<div class="paragraph">
+<p>Metadata is a broad concept. In our <a href="#glossary-data-management">data management</a> model the term "metadata" is used in several contexts, specifically the five categories that are briefly described in <a href="#table-metadata">Table 3</a>.</p>
+</div>
+<table id="table-metadata" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Brief introduction to different types of metadata.</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="discovery-metadata"></a>Discovery metadata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to find relevant data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Discovery metadata are also called index metadata and are a digital version of the library index card. They describe who did what, where and when, how to access data and potential constraints on the data. They shall also link to further information on the data, such as <a href="#site-metadata">site metadata</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ISO-19115">ISO 19115</a><br>
+<a href="#gcmd">GCMD</a>/<a href="#dif">DIF</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="use-metadata"></a>Use metadata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to understand data found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use metadata describes the actual content of a <a href="#glossary-dataset">dataset</a> and how it is encoded. The purpose is to enable the user to understand the data without any further communication. They describe the content of variables using standardised vocabularies, units of variables, encoding of missing values, map projections, etc.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#cf">Climate and Forecast (CF) Convention</a><br>
+<a href="#bufr">BUFR</a><br>
+<a href="#grib">GRIB</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="site-metadata"></a>Site metadata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to understand data found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Site metadata are used to describe the context of observational data. They describe the location of an observation, the instrumentation, procedures, etc. To a certain extent they overlap with <a href="#discovery-metadata">discovery metadata</a>, but also extend discovery metadata. Site metadata can be used for observation network design. Site metadata can be considered a type of <a href="#use-metadata">use metadata</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#wigos">WIGOS</a><br>
+<a href="#ogc-om">OGC O&amp;M</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="configuration-metadata"></a>Configuration metadata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to tune portal services for <a href="#glossary-dataset">datasets</a> intended for data consumers (e.g., WMS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration metadata are used to improve the services offered through a portal to the user community. This can, e.g., be how to best visualise a <a href="#glossary-product">product</a>.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a id="system-metadata"></a>System metadata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to understand the technical structure of the <a href="#glossary-data-management">data management</a> system and track changes in it</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System metadata covers, e.g., technical details of the storage system, <a href="#glossary-web-service">web services</a>, their purpose and how they interact with other components of the <a href="#glossary-data-management">data management</a> system, available and consumed storage, number of users and other KPI elements etc.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The tools and facilities used to manage the information for efficient discovery and use are further described in <a href="#structuring-and-documenting">Chapter 2</a>.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -3169,7 +3101,7 @@ GIS systems have lately evolved in distributed <a href="#glossary-spatial-data-i
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-11-01 03:17:14 UTC
+Last updated 2022-11-08 14:15:33 UTC
 </div>
 </div>
 </body>
