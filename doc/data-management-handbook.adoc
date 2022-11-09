@@ -14,14 +14,15 @@ include::{title_page}[]
 :numbered:
 include::introduction.adoc[]
 
+//:numbered:
+//include::human-roles.adoc[]
+
 :numbered:
-include::human-roles.adoc[]
+include::summary-requirements.adoc[]
 
 :numbered:
 include::{special_intro}[]
 
-:numbered:
-include::summary-requirements.adoc[]
 
 :numbered:
 include::structure-and-documenting.adoc[]
